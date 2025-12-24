@@ -112,11 +112,13 @@
                                         name="Phone"
                                         id="phone"
                                         placeholder="0555 555 55 55"
-                                        pattern="^0?[5][0-9]{9}$"
                                         maxlength="11"
+                                        minlength="10"
+                                        pattern="[0-9]{11}"
                                         inputmode="numeric"
                                         required
-                                        title="@Localizer["Lütfen geçerli bir telefon numarası girin. Örnek: 0555 555 55 55"]"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                                        title="@Localizer["Lütfen geçerli bir telefon numarası girin."]"
                                     />
                                 </div>
                             </div>

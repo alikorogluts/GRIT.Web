@@ -71,8 +71,8 @@
   <data name="Telefon Numaranız" xml:space="preserve">
     <value>Phone Number</value>
   </data>
-  <data name="Lütfen geçerli bir telefon numarası girin. Örnek: 0555 555 55 55" xml:space="preserve">
-    <value>Please enter a valid phone number. Example: 0555 555 55 55</value>
+  <data name="Lütfen geçerli bir telefon numarası girin." xml:space="preserve">
+    <value>Please enter a valid phone number. </value>
   </data>
 
   <data name="Konu" xml:space="preserve">
