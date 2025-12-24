@@ -46,4 +46,8 @@
       <AdditionalFiles Include="Areas\Admin\Views\Admin\_NewsModal.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
 </Project>

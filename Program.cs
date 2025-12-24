@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing; // ✅ BU NAMESPACE ŞART
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using GRIT.Web.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

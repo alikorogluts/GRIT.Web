@@ -211,3 +211,5 @@
 /Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/obj/Release/net9.0/compressed/52qnqzmixt-2vh3x81max.gz
 /Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/obj/Release/net9.0/compressed/zq51j3iika-xhrfi438qr.gz
 /Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/obj/Release/net9.0/compressed/ofvkytdrkb-hcdhta2pov.gz
+/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/obj/Release/net9.0/compressed/wcof9m3gal-dfkcv6qw1x.gz
+/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/obj/Release/net9.0/compressed/nan623yvv3-eshjqww7oo.gz
