@@ -1,0 +1,124 @@
+/* ======= STATISTICS MODERN STYLES ======= */
+.statistics-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: var(--bg-secondary);
+    overflow: hidden;
+}
+
+/* Hafif Desenli Arka Plan */
+.stats-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(var(--text-tertiary) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+/* Badge (Etiket) */
+.stat-badge {
+    display: inline-block; padding: 6px 15px;
+    border: 1px solid var(--accent-color); color: var(--accent-color);
+    border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
+}
+
+/* --- GLASS STAT CARD --- */
+.glass-stat-card {
+    background: var(--card-bg); /* Temadan gelen kart rengi */
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Glass Effect için eklemeler */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Hover Efekti */
+.glass-stat-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-main);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Kartın üstüne renkli çizgi */
+.glass-stat-card::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--primary-main), var(--accent-color));
+    opacity: 0; transition: opacity 0.3s;
+}
+.glass-stat-card:hover::before { opacity: 1; }
+
+/* İkon Alanı */
+.stat-icon-wrapper {
+    width: 70px; height: 70px;
+    margin: 0 auto 20px;
+    background: rgba(26, 126, 99, 0.1); /* Hafif yeşil */
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; color: var(--primary-main);
+    transition: all 0.3s ease;
+}
+
+.glass-stat-card:hover .stat-icon-wrapper {
+    background: var(--primary-main);
+    color: #fff;
+    transform: scale(1.1) rotateY(180deg);
+}
+
+/* Rakamlar (Gradient Text) */
+.stat-info {
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    /* Gradient Yazı */
+    background: linear-gradient(135deg, var(--text-primary), var(--primary-main));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.stat-symbol {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary); /* Okunabilirlik için ana metin rengi */
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary); /* İkincil metin rengi */
+    line-height: 1.5;
+}
+
+/* --- Responsive Ayarlar --- */
+@media (max-width: 992px) {
+    .glass-stat-card { padding: 25px 15px; }
+    .stat-number { font-size: 2.8rem; }
+}
+
+@media (max-width: 576px) {
+    .stat-number { font-size: 2.5rem; }
+    .stat-icon-wrapper { width: 60px; height: 60px; font-size: 1.5rem; }
+}

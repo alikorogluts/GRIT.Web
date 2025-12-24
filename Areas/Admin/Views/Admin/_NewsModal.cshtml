@@ -1,0 +1,472 @@
+<div class="modal fade" id="newsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable modal-fullscreen-md-down">
+        <div class="modal-content modal-custom">
+
+            <form action="/Admin/Save" method="post" enctype="multipart/form-data" id="newsForm" class="d-flex flex-column h-100 w-100">
+                @Html.AntiForgeryToken()
+                
+                <input type="hidden" name="Id" id="NewsId" value="0">
+                <input type="hidden" name="Image" id="CurrentImageUrl">
+
+                <div class="modal-header modal-header-custom flex-shrink-0">
+                    <h5 class="modal-title fw-bold" id="modalTitle">
+                        <i class="fas fa-pen-nib me-2 text-primary-custom"></i>
+                        <span>İçerik Editörü</span>
+                    </h5>
+                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body modal-body-custom flex-grow-1">
+                    <div class="row g-4">
+                        
+                        <div class="col-12 col-lg-3 border-end-lg border-secondary border-opacity-25">
+                            <h6 class="section-title mb-3"><i class="fas fa-cog me-2"></i>Genel Ayarlar</h6>
+
+                            <div class="mb-4 text-center">
+                                <label class="form-label d-block text-start small text-muted">Kapak Görseli</label>
+                                
+                                <!-- Resim Kaynağı Seçimi -->
+                                <div class="btn-group w-100 mb-2" role="group">
+                                    <input type="radio" class="btn-check" name="imageSourceType" id="imageSourceFile" value="file" checked>
+                                    <label class="btn btn-outline-primary btn-sm" for="imageSourceFile">
+                                        <i class="fas fa-upload me-1"></i> Dosya Yükle
+                                    </label>
+                                    
+                                    <input type="radio" class="btn-check" name="imageSourceType" id="imageSourceUrl" value="url">
+                                    <label class="btn btn-outline-primary btn-sm" for="imageSourceUrl">
+                                        <i class="fas fa-link me-1"></i> URL Gir
+                                    </label>
+                                </div>
+                                
+                                <!-- Önizleme -->
+                                <div class="img-preview-wrapper mb-2">
+                                    <img id="imgPreview" src="/image/placeholder.png" class="img-fluid" alt="Preview">
+                                </div>
+                                
+                                <!-- Dosya Yükleme Alanı -->
+                                <div id="fileUploadSection">
+                                    <input type="file" name="ImageFile" id="imageInput" class="form-control form-control-sm form-custom" accept="image/*" onchange="previewImage(this)">
+                                    <div class="d-flex justify-content-between mt-1">
+                                        <small class="text-muted" style="font-size: 10px;">Max: 100MB</small>
+                                        <small class="text-muted" style="font-size: 10px;">jpg, png, webp</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- URL Girme Alanı (başlangıçta gizli) -->
+                                <div id="urlInputSection" style="display: none;">
+                                    <input type="text" name="ImageUrl" id="imageUrlInput" class="form-control form-control-sm form-custom" placeholder="https://example.com/image.jpg">
+                                    <small class="text-muted d-block mt-1" style="font-size: 10px;">YouTube, Imgur veya diğer görsel URL'leri</small>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">Yayın Tarihi</label>
+                                <input type="date" name="Date" id="Date" class="form-control form-custom">
+                            </div>
+                           
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">Dış Link</label>
+                                <input type="text" name="ExternalUrl" id="ExternalUrl" class="form-control form-custom" placeholder="https://...">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small text-muted">Video Embed</label>
+                                <input type="text" name="VideoEmbed" id="VideoEmbed" class="form-control form-custom" placeholder="<iframe>...">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-9 ps-lg-4">
+                            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mb-3 gap-2">
+                                <ul class="nav nav-pills custom-pills w-100 w-sm-auto" id="langTabs" role="tablist">
+                                    <li class="nav-item flex-fill text-center">
+                                        <button class="nav-link w-100 active" id="tr-tab" data-bs-toggle="pill" data-bs-target="#tab-tr" type="button">
+                                            <img src="https://flagcdn.com/w20/tr.png" class="me-2 rounded-1"> Türkçe
+                                        </button>
+                                    </li>
+                                    <li class="nav-item flex-fill text-center">
+                                        <button class="nav-link w-100" id="en-tab" data-bs-toggle="pill" data-bs-target="#tab-en" type="button">
+                                            <img src="https://flagcdn.com/w20/gb.png" class="me-2 rounded-1"> İngilizce
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content" id="langTabsContent">
+                                <div class="tab-pane fade show active" id="tab-tr" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-12 col-md-8 mb-3">
+                                            <label class="form-label small text-muted">Başlık (TR)</label>
+                                            <input type="text" name="TitleTr" id="TitleTr" class="form-control form-custom fw-bold">
+                                        </div>
+                                        <div class="col-12 col-md-8 mb-3">
+                                            <label class="form-label small text-muted">Yazar (TR)</label>
+                                            <input type="text" name="AuthorTr" id="AuthorTr" class="form-control form-custom fw-bold">
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-3">
+                                            <label class="form-label small text-muted">Kategori</label>
+                                            <input type="text" name="CategoryTr" id="CategoryTr" class="form-control form-custom">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label small text-muted">Kısa Özet</label>
+                                            <textarea name="SummaryTr" id="SummaryTr" class="form-control form-custom" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label small text-muted">Detaylı İçerik (HTML)</label>
+                                            <textarea name="DescriptionTr" id="DescriptionTr" class="form-control form-custom" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="tab-en" role="tabpanel">
+                                    <div class="row">
+                                        <div class="col-12 col-md-8 mb-3">
+                                            <label class="form-label small text-muted">Title (EN)</label>
+                                            <input type="text" name="TitleEn" id="TitleEn" class="form-control form-custom fw-bold">
+                                        </div>
+                                        <div class="col-12 col-md-8 mb-3">
+                                            <label class="form-label small text-muted">Author (En)</label>
+                                            <input type="text" name="AuthorEn" id="AuthorEn" class="form-control form-custom fw-bold">
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-3">
+                                            <label class="form-label small text-muted">Category</label>
+                                            <input type="text" name="CategoryEn" id="CategoryEn" class="form-control form-custom">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label small text-muted">Summary</label>
+                                            <textarea name="SummaryEn" id="SummaryEn" class="form-control form-custom" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label small text-muted">Description (HTML)</label>
+                                            <textarea name="DescriptionEn" id="DescriptionEn" class="form-control form-custom" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer modal-footer-custom flex-shrink-0">
+                    <button type="button" class="btn btn-custom-secondary flex-grow-1 flex-sm-grow-0" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-2"></i>İptal
+                    </button>
+                    <button type="submit" class="btn btn-custom-primary px-4 flex-grow-1 flex-sm-grow-0">
+                        <i class="fas fa-save me-2"></i> Kaydet
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .modal-custom {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-xl);
+        border-radius: var(--radius-lg);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .modal-header-custom {
+        border-bottom: 1px solid var(--border-color);
+        padding: 1rem 1.5rem;
+        background-color: var(--bg-card);
+    }
+    
+    .modal-footer-custom {
+        border-top: 1px solid var(--border-color);
+        padding: 1rem 1.5rem;
+        background-color: var(--bg-card);
+    }
+
+    .modal-body-custom {
+        padding: 1.5rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: var(--primary-main) var(--bg-card);
+    }
+
+    .modal-body-custom::-webkit-scrollbar { width: 8px; }
+    .modal-body-custom::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+    .modal-body-custom::-webkit-scrollbar-thumb { background-color: var(--primary-main); border-radius: 4px; }
+
+    .img-preview-wrapper {
+        width: 100%; height: 160px;
+        border: 2px dashed var(--border-color);
+        border-radius: var(--radius-md);
+        display: flex; align-items: center; justify-content: center;
+        background-color: rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+    
+    #imgPreview { width: 100%;
+        height: 100%;
+        object-fit: cover;   /* 🔥 Resmi bozmadan kutuya doldurur */
+        object-position: center;}
+    
+    .form-custom {
+        border: 1px solid var(--border-color);
+        color: var(--text-primary); 
+        border-radius: var(--radius-sm);
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .btn-check:checked + .btn-outline-primary {
+        background-color: var(--primary-main);
+        border-color: var(--primary-main);
+        color: white;
+    }
+    
+    @@media (min-width: 992px) {
+        .border-end-lg { border-right: 1px solid rgba(255,255,255,0.1); }
+    }
+    
+    .is-invalid {
+        border-color: #dc3545 !important;
+        background-color: rgba(220, 53, 69, 0.08) !important;
+        animation: shake 0.3s ease-in-out;
+    }
+    
+    .is-invalid:focus {
+        border-color: #dc3545 !important;
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+    }
+    
+    @@keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+    }
+</style>
+
+<script>
+    var newsModal;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var modalElement = document.getElementById('newsModal');
+        if (modalElement) {
+            newsModal = new bootstrap.Modal(modalElement);
+        }
+        
+        // Resim kaynağı değişimi
+        const fileRadio = document.getElementById('imageSourceFile');
+        const urlRadio = document.getElementById('imageSourceUrl');
+        const fileSection = document.getElementById('fileUploadSection');
+        const urlSection = document.getElementById('urlInputSection');
+        const imageInput = document.getElementById('imageInput');
+        const imageUrlInput = document.getElementById('imageUrlInput');
+        
+        function toggleImageSource() {
+            if (urlRadio.checked) {
+                fileSection.style.display = 'none';
+                urlSection.style.display = 'block';
+                imageInput.value = '';
+            } else {
+                fileSection.style.display = 'block';
+                urlSection.style.display = 'none';
+                imageUrlInput.value = '';
+            }
+        }
+        
+        fileRadio.addEventListener('change', toggleImageSource);
+        urlRadio.addEventListener('change', toggleImageSource);
+        
+        // URL input değişiminde önizleme
+        imageUrlInput.addEventListener('input', function() {
+            previewImageUrl(this);
+        });
+    });
+
+    function openModal() {
+        document.getElementById('newsForm').reset();
+        document.getElementById('NewsId').value = "0";
+        document.getElementById('CurrentImageUrl').value = "";
+        document.getElementById('imgPreview').src = "/image/placeholder.png";
+        
+        // Varsayılan dosya yükleme
+        document.getElementById('imageSourceFile').checked = true;
+        document.getElementById('fileUploadSection').style.display = 'block';
+        document.getElementById('urlInputSection').style.display = 'none';
+        
+        document.getElementById('modalTitle').innerHTML = '<i class="fas fa-plus-circle me-2 text-primary-custom"></i><span>Yeni İçerik Ekle</span>';
+        
+        const dateInput = document.getElementById('Date');
+        if(dateInput) dateInput.valueAsDate = new Date();
+        
+        newsModal.show();
+    }
+
+    function editItem(item) {
+        document.getElementById('newsForm').reset();
+        document.getElementById('NewsId').value = item.Id;
+        
+        if(item.Date) document.getElementById('Date').value = item.Date.split('T')[0];
+        
+        document.getElementById('ExternalUrl').value = item.ExternalUrl || "";
+        document.getElementById('VideoEmbed').value = item.VideoEmbed || "";
+        
+        document.getElementById('AuthorTr').value = item.AuthorTr || "";
+        document.getElementById('TitleTr').value = item.TitleTr || "";
+        document.getElementById('CategoryTr').value = item.CategoryTr || "";
+        document.getElementById('SummaryTr').value = item.SummaryTr || "";
+        document.getElementById('DescriptionTr').value = item.DescriptionTr || "";
+        
+        document.getElementById('AuthorEn').value = item.AuthorEn || "";
+        document.getElementById('TitleEn').value = item.TitleEn || "";
+        document.getElementById('CategoryEn').value = item.CategoryEn || "";
+        document.getElementById('SummaryEn').value = item.SummaryEn || "";
+        document.getElementById('DescriptionEn').value = item.DescriptionEn || "";
+        
+        const imagePath = item.Image || "";
+        if (imagePath) {
+            document.getElementById('imgPreview').src = imagePath;
+            document.getElementById('CurrentImageUrl').value = imagePath;
+            
+            // URL mi dosya mı kontrol et
+            if (imagePath.startsWith('http')) {
+                document.getElementById('imageSourceUrl').checked = true;
+                document.getElementById('imageUrlInput').value = imagePath;
+                document.getElementById('fileUploadSection').style.display = 'none';
+                document.getElementById('urlInputSection').style.display = 'block';
+            } else {
+                document.getElementById('imageSourceFile').checked = true;
+                document.getElementById('fileUploadSection').style.display = 'block';
+                document.getElementById('urlInputSection').style.display = 'none';
+            }
+        } else {
+            document.getElementById('imgPreview').src = "/image/placeholder.png";
+        }
+        
+        newsModal.show();
+    }
+    
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('imgPreview').src = e.target.result;
+                document.getElementById('CurrentImageUrl').value = '';
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    function previewImageUrl(input) {
+        const url = input.value.trim();
+        if (url) {
+            let imageUrl = url;
+            
+            // YouTube URL'sini thumbnail'e çevir
+            const youtubeMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+            if (youtubeMatch) {
+                imageUrl = `https://img.youtube.com/vi/${youtubeMatch[1]}/maxresdefault.jpg`;
+            }
+            
+            document.getElementById('imgPreview').src = imageUrl;
+            document.getElementById('CurrentImageUrl').value = imageUrl;
+        }
+    }
+    
+    // Form Validasyonu
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('newsForm');
+        
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                document.querySelectorAll('.is-invalid').forEach(el => {
+                    el.classList.remove('is-invalid');
+                });
+                
+                const requiredFields = [];
+                
+                requiredFields.push({
+                    element: document.getElementById('Date'),
+                    name: 'Yayın Tarihi',
+                    tab: null
+                });
+                
+                // Resim kontrolü
+                const newsId = document.getElementById('NewsId').value;
+                const imageInput = document.getElementById('imageInput');
+                const imageUrlInput = document.getElementById('imageUrlInput');
+                const currentImageUrl = document.getElementById('CurrentImageUrl').value;
+                
+                if (newsId === "0" && !imageInput.files.length && !imageUrlInput.value.trim() && !currentImageUrl) {
+                    requiredFields.push({
+                        element: document.getElementById('imageSourceFile').checked ? imageInput : imageUrlInput,
+                        name: 'Kapak Görseli (Dosya veya URL)',
+                        tab: null
+                    });
+                }
+                
+                // TR alanları
+                requiredFields.push(
+                    { element: document.getElementById('TitleTr'), name: 'Başlık (TR)', tab: 'tr' },
+                    { element: document.getElementById('AuthorTr'), name: 'Yazar (TR)', tab: 'tr' },
+                    { element: document.getElementById('CategoryTr'), name: 'Kategori (TR)', tab: 'tr' },
+                    { element: document.getElementById('SummaryTr'), name: 'Kısa Özet (TR)', tab: 'tr' },
+                    { element: document.getElementById('DescriptionTr'), name: 'Detaylı İçerik (TR)', tab: 'tr' }
+                );
+                
+                // EN alanları
+                requiredFields.push(
+                    { element: document.getElementById('TitleEn'), name: 'Title (EN)', tab: 'en' },
+                    { element: document.getElementById('AuthorEn'), name: 'Author (EN)', tab: 'en' },
+                    { element: document.getElementById('CategoryEn'), name: 'Category (EN)', tab: 'en' },
+                    { element: document.getElementById('SummaryEn'), name: 'Summary (EN)', tab: 'en' },
+                    { element: document.getElementById('DescriptionEn'), name: 'Description (EN)', tab: 'en' }
+                );
+                
+                const emptyFields = [];
+                requiredFields.forEach(field => {
+                    if (!field.element) return;
+                    
+                    const value = field.element.value || '';
+                    if (value.trim() === '') {
+                        emptyFields.push(field.name);
+                        field.element.classList.add('is-invalid');
+                    }
+                });
+                
+                if (emptyFields.length > 0) {
+                    alert('⚠️ Lütfen aşağıdaki zorunlu alanları doldurunuz:\n\n• ' + emptyFields.join('\n• '));
+                    
+                    const firstEmpty = requiredFields.find(f => {
+                        if (!f.element) return false;
+                        const value = f.element.value || '';
+                        return value.trim() === '';
+                    });
+                    
+                    if (firstEmpty && firstEmpty.element) {
+                        if (firstEmpty.tab === 'tr') {
+                            document.getElementById('tr-tab').click();
+                        } else if (firstEmpty.tab === 'en') {
+                            document.getElementById('en-tab').click();
+                        }
+                        
+                        setTimeout(() => {
+                            firstEmpty.element.focus();
+                            firstEmpty.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }, 150);
+                    }
+                    
+                    return false;
+                }
+                
+                this.submit();
+            });
+            
+            const inputs = form.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    this.classList.remove('is-invalid');
+                });
+            });
+        }
+    });
+</script>

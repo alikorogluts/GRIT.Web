@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+  <data name="Ürünlerimiz" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  
+  <data name="Sigorta ve reasürans süreçleri için konumsal veriye dayalı, bilimsel ve teknolojik çözümler sunuyoruz." xml:space="preserve">
+    <value>We offer scientific and technological solutions based on geospatial data for insurance and reinsurance processes.</value>
+  </data>
+  
+  <data name="Yazılım Çözümleri" xml:space="preserve">
+    <value>Software Solutions</value>
+  </data>
+  
+  <data name="Duyarlılık Haritaları" xml:space="preserve">
+    <value>Susceptibility Maps</value>
+  </data>
+
+  <data name="Sigorta • Risk Analizi &amp; Raporlama" xml:space="preserve">
+    <value>Insurance • Rısk Analysıs &amp; Reportıng</value>
+  </data>
+  
+  <data name="Konum / adres bazlı risk sorgulama, poliçe öncesi değerlendirme ve lokasyon risk skorlarını kullanıcı dostu bir arayüzde sunan web tabanlı risk analiz yazılımıdır." xml:space="preserve">
+    <value>A web-based risk analysis software offering location/address-based risk queries, pre-policy assessment, and location risk scores in a user-friendly interface.</value>
+  </data>
+  
+  <data name="Koordinat/adres bazlı anlık risk skoru" xml:space="preserve">
+    <value>Coordinate/address-based risk score</value>
+  </data>
+  <data name="Poliçe kabulü &amp; fiyatlama desteği" xml:space="preserve">
+    <value>Policy acceptance &amp; pricing support</value>
+  </data>
+  <data name="RESTFull Mimari &amp; API entegrasyonu" xml:space="preserve">
+    <value>RESTful Architecture &amp; API integration</value>
+  </data>
+
+  <data name="Reazy.co Servisi" xml:space="preserve">
+    <value>Reazy.co Service</value>
+  </data>
+  <data name="Sigorta • Risk Sorgulama • Abonelik Modeli" xml:space="preserve">
+    <value>Insurance • Rısk Query • Subscrıptıon Model</value>
+  </data>
+  
+  <data name="Adres veya koordinat bazlı risk sorgulamasına olanak sağlayan WebCBS platformudur. Esnek bir yapıya sahiptir, meteorolojik risk uyarıları ve acente bilgilendirme servisleri eklenebilir." xml:space="preserve">
+    <value>A WebGIS platform allowing address or coordinate-based risk queries. It has a flexible structure; meteorological risk alerts and agency notification services can be added.</value>
+  </data>
+  
+  <data name="Sorgu Başına Ödeme (Pay As You Go)" xml:space="preserve">
+    <value>Pay As You Go</value>
+  </data>
+  <data name="Esnek ve genişletilebilir mimari" xml:space="preserve">
+    <value>Flexible and extensible architecture</value>
+  </data>
+  <data name="7/24 Meteorolojik risk uyarıları" xml:space="preserve">
+    <value>24/7 Meteorological risk alerts</value>
+  </data>
+
+  <data name="İSG • Gerçek Zamanlı İzleme • Yapay Zeka" xml:space="preserve">
+    <value>HSE • Real-Tıme Monıtorıng • AI</value>
+  </data>
+  <data name="Yapay zeka destekli video analizi ile çalışan güvenliği ihlallerini tespit eden, anlık bildirim sistemleri ve raporlama panelleri sunan modern bir İSG takip, analiz ve raporlama platformudur." xml:space="preserve">
+    <value>A modern HSE tracking, analysis, and reporting platform that detects occupational safety violations via AI-supported video analytics, offering instant notification systems.</value>
+  </data>
+  <data name="Mevcut kameralarla gerçek zamanlı analiz" xml:space="preserve">
+    <value>Real-time analysis with existing cameras</value>
+  </data>
+  <data name="Kişisel koruyucu donanım tespiti" xml:space="preserve">
+    <value>Personal Protective Equipment (PPE) detection</value>
+  </data>
+  <data name="Otomatik ihlal alarmı &amp; bildirim paneli" xml:space="preserve">
+    <value>Automatic violation alarm &amp; notification panel</value>
+  </data>
+
+  <data name="Kullanım Alanları:" xml:space="preserve">
+    <value>Use Cases:</value>
+  </data>
+  <data name="Çıktılar:" xml:space="preserve">
+    <value>Outputs:</value>
+  </data>
+  <data name="Veriler:" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="Model Validasyonu:" xml:space="preserve">
+    <value>Model Validation:</value>
+  </data>
+  <data name="Doğrulama:" xml:space="preserve">
+    <value>Validation:</value>
+  </data>
+
+  <data name="Heyelan Haritası" xml:space="preserve">
+    <value>Landslide Map</value>
+  </data>
+  <data name="Heyelan Duyarlılık Haritaları" xml:space="preserve">
+    <value>Landslide Susceptibility Maps</value>
+  </data>
+  <data name="HEYELAN • MAKİNE ÖĞRENMESİ • 14 PARAMETRE" xml:space="preserve">
+    <value>LANDSLIDE • MACHINE LEARNING • 14 PARAMETERS</value>
+  </data>
+  <data name="10 m çözünürlükte, 14 farklı nedensel faktör ile makine öğrenmesi tabanlı duyarlılık modelleri kullanılarak üretilen haritalardır. Envanter verisi ile doğrulama sağlanır." xml:space="preserve">
+    <value>Maps produced using machine learning-based susceptibility models with 14 different conditional factors at 10 m resolution. Validated with landslide inventory data.</value>
+  </data>
+  <data name="Makine öğrenmesi tabanlı üretim" xml:space="preserve">
+    <value>Machine learning-based production</value>
+  </data>
+  <data name="Geriye dönük doğrulama" xml:space="preserve">
+    <value>Retrospective validation</value>
+  </data>
+  <data name="Poliçe bazlı değerlendirme" xml:space="preserve">
+    <value>Policy-based assessment</value>
+  </data>
+  <data name="Underwriting incelemeleri, fiyatlama, saha ekipleri yönlendirme, reasürans portföy analizi." xml:space="preserve">
+    <value>Underwriting reviews, pricing, field team guidance, reinsurance portfolio analysis.</value>
+  </data>
+  <data name="10 m raster harita, bina/kritik tesis seviyesinde risk skoru." xml:space="preserve">
+    <value>10 m raster map, risk score at building/critical facility level.</value>
+  </data>
+
+  <data name="Sel Haritası" xml:space="preserve">
+    <value>Flood Map</value>
+  </data>
+  <data name="Sel / Taşkın Duyarlılık Haritaları" xml:space="preserve">
+    <value>Flood Susceptibility Maps</value>
+  </data>
+  <data name="HEC-RAS • MIKE FLOOD • MAKİNE ÖĞRENMESİ" xml:space="preserve">
+    <value>HEC-RAS • MIKE FLOOD • MACHINE LEARNING</value>
+  </data>
+  <data name="Şehir içi ve akarsu tabanlı taşkın risklerini kapsayan; HEC-RAS ve Makine Öğrenmesi (ML) algoritmaları kullanılarak üretilen hibrit model çözümüdür." xml:space="preserve">
+    <value>A hybrid model solution covering urban and river-based flood risks, produced using HEC-RAS and Machine Learning (ML) algorithms.</value>
+  </data>
+  <data name="Hibrit Model: HEC-RAS + ML" xml:space="preserve">
+    <value>Hybrid Model: HEC-RAS + ML</value>
+  </data>
+  <data name="14 farklı nedensel faktör" xml:space="preserve">
+    <value>14 different conditional factors</value>
+  </data>
+  <data name="Şehir içi taşkın tespiti" xml:space="preserve">
+    <value>Urban flood detection</value>
+  </data>
+  <data name="Hasar öncesi önlem, risk değerlendirme, fiyatlama, acil müdahale planlama." xml:space="preserve">
+    <value>Pre-loss mitigation, risk assessment, pricing, emergency response planning.</value>
+  </data>
+  <data name="Hidrolojik, meteorolojik ve topografik veriler &amp; uydu verileri." xml:space="preserve">
+    <value>Hydrological, meteorological, and topographic data &amp; satellite data.</value>
+  </data>
+
+  <data name="Derinlik Haritası" xml:space="preserve">
+    <value>Depth Map</value>
+  </data>
+  <data name="Taşkın Derinlik Haritaları" xml:space="preserve">
+    <value>Flood Depth Maps</value>
+  </data>
+  <data name="SENARYO ANALİZİ • SU DERİNLİĞİ • AĞAÇ TABANLI MODEL" xml:space="preserve">
+    <value>SCENARIO ANALYSIS • WATER DEPTH • TREE-BASED MODEL</value>
+  </data>
+  <data name="72 saatlik ortalama ve maksimum yağış senaryoları için derinlik haritalarını üreten modeller. Ağaç tabanlı topluluk öğrenme algoritmaları kullanılır." xml:space="preserve">
+    <value>Models generating depth maps for 72-hour average and maximum rainfall scenarios. Uses tree-based ensemble learning algorithms.</value>
+  </data>
+  <data name="72 saatlik ort/maks yağış senaryoları" xml:space="preserve">
+    <value>72-hour avg/max rainfall scenarios</value>
+  </data>
+  <data name="Hassas taşkın su derinliği (cm)" xml:space="preserve">
+    <value>Precise flood water depth (cm)</value>
+  </data>
+  <data name="Hasar rezervi hesaplama desteği" xml:space="preserve">
+    <value>Loss reserve calculation support</value>
+  </data>
+  <data name="Hasar rezervi hesaplama, hızlı tazminat ön değerlendirmesi, saha önceliklendirme." xml:space="preserve">
+    <value>Loss reserve calculation, rapid preliminary claims assessment, field prioritization.</value>
+  </data>
+  <data name="Geriye dönük ölçümler ve uydu/saha verileriyle çapraz doğrulama." xml:space="preserve">
+    <value>Cross-validation with retrospective measurements and satellite/field data.</value>
+  </data>
+
+  <data name="Yangın Haritası" xml:space="preserve">
+    <value>Fire Map</value>
+  </data>
+  <data name="Orman Yangını Duyarlılık Haritaları" xml:space="preserve">
+    <value>Forest Fire Susceptibility Maps</value>
+  </data>
+  <data name="RİSKLİ 24 İL • 16 PARAMETRE • MAKİNE ÖĞRENMESİ" xml:space="preserve">
+    <value>24 RISKY PROVINCES • 16 PARAMETERS • MACHINE LEARNING</value>
+  </data>
+  <data name="Yüksek riskli 24 il için; rüzgar, sıcaklık, nem, yakıt türü gibi 16 parametre ve 10 farklı ML algoritması ile üretilen duyarlılık haritalarıdır." xml:space="preserve">
+    <value>Susceptibility maps produced for 24 high-risk provinces using 16 parameters (wind, temp, humidity, fuel type, etc.) and 10 different ML algorithms.</value>
+  </data>
+  <data name="Kapsam: Yangın riski yüksek 24 il için üretim" xml:space="preserve">
+    <value>Scope: Production for 24 high fire risk provinces</value>
+  </data>
+  <data name="İl sınırı ölçeğinde geniş kapsam" xml:space="preserve">
+    <value>Wide scope at provincial boundary scale</value>
+  </data>
+  <data name="UW ve reasürans risk değerlendirmesi için uygun" xml:space="preserve">
+    <value>Suitable for UW and reinsurance risk assessment</value>
+  </data>
+  <data name="UW süreçleri, erken uyarı, tahliye planlaması, tesis koruma." xml:space="preserve">
+    <value>UW processes, early warning, evacuation planning, facility protection.</value>
+  </data>
+  <data name="Gerçek yangın olaylarıyla geriye dönük doğrulama testleri." xml:space="preserve">
+    <value>Retrospective validation tests with real fire events.</value>
+  </data>
+
+  <data name="Deprem Haritası" xml:space="preserve">
+    <value>Earthquake Map</value>
+  </data>
+  <data name="Deprem Duyarlılık Haritaları" xml:space="preserve">
+    <value>Earthquake Susceptibility Maps</value>
+  </data>
+  <data name="FAY • ZEMİN • ÇOK KRİTERLİ KARAR ANALİZİ" xml:space="preserve">
+    <value>FAULT • GROUND • MULTI-CRITERIA DECISION ANALYSIS</value>
+  </data>
+  <data name="Zemin dinamiği, fay yoğunluğu ve yerel zemin amplifikasyonu gibi faktörleri birleştirerek depreme duyarlı bölgeleri ve yapıların hasar potansiyelini belirler." xml:space="preserve">
+    <value>Determines earthquake-susceptible zones and structural damage potential by combining factors like soil dynamics, fault density, and local ground amplification.</value>
+  </data>
+  <data name="AHP Tabanlı Çok Kriterli Karar Analizi" xml:space="preserve">
+    <value>AHP-Based Multi-Criteria Decision Analysis</value>
+  </data>
+  <data name="Deprem duyarlılık bölgeleri" xml:space="preserve">
+    <value>Earthquake susceptibility zones</value>
+  </data>
+  <data name="Poliçe seviyesinde risk çıktısı" xml:space="preserve">
+    <value>Risk output at policy level</value>
+  </data>
+  <data name="Deprem risk fiyatlaması, zemin temelli prim ayrıştırma, altyapı güvenlik çalışmaları." xml:space="preserve">
+    <value>Earthquake risk pricing, ground-based premium segmentation, infrastructure security studies.</value>
+  </data>
+  <data name="Deprem duyarlılık haritaları." xml:space="preserve">
+    <value>Earthquake susceptibility maps.</value>
+  </data>
+
+</root>

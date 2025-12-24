@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+    <data name="Hakkımızda" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+
+    <data name="GRİT Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. Tic. Ltd. Şti., akademik yetkinlikleri sayesinde sigorta ve reasürans şirketleri için bilimsel temellere dayalı yenilikçi çözümler üreten bir Teknopark şirketidir." xml:space="preserve">
+    <value>GRIT Geographic Risk and Information Technology Services Ltd. is a Technopark company that provides innovative solutions based on scientific foundations for insurance and reinsurance companies, leveraging its academic competencies.</value>
+  </data>
+
+    <data name="MİSYON" xml:space="preserve">
+    <value>MISSION</value>
+  </data>
+  
+    <data name="Sigorta ve reasürans sektörleri için doğal afet risklerine karşı bilimsel temelli, yüksek çözünürlüklü ve doğruluk oranı yüksek duyarlılık haritaları ile WebCBS tabanlı yenilikçi yazılım çözümleri sunarak; müşterilerimizin risk yönetimi kararlarını güçlendirmek." xml:space="preserve">
+    <value>To strengthen our customers' risk management decisions by providing science-based, high-resolution, and high-accuracy susceptibility maps against natural disaster risks and innovative WebGIS-based software solutions for the insurance and reinsurance sectors.</value>
+  </data>
+
+    <data name="VİZYON" xml:space="preserve">
+    <value>VISION</value>
+  </data>
+
+    <data name="Türkiye ve diğer ülkelerde, coğrafi risk değerlendirmesinde referans kuruluş olmak; yapay zeka, makine öğrenmesi ve ileri haritalama teknolojileri ile sektördeki dönüşümü liderlik ederek yönlendirmek." xml:space="preserve">
+    <value>To be the reference organization in geographical risk assessment in Turkey and abroad; to lead and guide the transformation in the sector with artificial intelligence, machine learning, and advanced mapping technologies.</value>
+  </data>
+
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+    <data name="Rakamlarla GRİT" xml:space="preserve">
+    <value>GRIT in Numbers</value>
+  </data>
+
+    <data name="İl" xml:space="preserve">
+    <value>Provinces</value>
+  </data>
+    <data name="Çalıştığımız il sayısı" xml:space="preserve">
+    <value>Provinces covered</value>
+  </data>
+
+    <data name="İlçe" xml:space="preserve">
+    <value>Districts</value>
+  </data>
+    <data name="Çalıştığımız ilçe sayısı" xml:space="preserve">
+    <value>Districts covered</value>
+  </data>
+
+    <data name="Doğruluk Oranı" xml:space="preserve">
+    <value>Accuracy Rate</value>
+  </data>
+    <data name="Bilimsel verilerle kanıtlanmış başarı" xml:space="preserve">
+    <value>Success proven by scientific data</value>
+  </data>
+
+    <data name="Kapsama" xml:space="preserve">
+    <value>Coverage</value>
+  </data>
+    <data name="Tüm poliçeler için risk skoru" xml:space="preserve">
+    <value>Risk score for all policies</value>
+  </data>
+
+</root>

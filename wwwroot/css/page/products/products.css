@@ -1,0 +1,580 @@
+
+/* ======= GENEL YAPILANDIRMA ======= */
+.products-section {
+    background: var(--bg-secondary);
+}
+
+.product-category-header {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    border-left: 4px solid var(--primary-main);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ======= KART TASARIMI ======= */
+.product-card-new {
+    display: flex;
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    scroll-margin-top: 100px; /* Linke tıklandığında menünün altında kalmaması için */
+    position: relative; /* Efektler için */
+}
+
+.product-card-new:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-main);
+}
+
+/* Sol Taraf (Thumb) */
+.product-card-new .thumb {
+    flex: 0 0 220px;
+    position: relative; /* Resim yerleşimi için */
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    overflow: hidden; /* Resim taşmasını engelle */
+}
+
+/* Yazılımlar için Gradient Arka Plan */
+.software-thumb {
+    background: linear-gradient(135deg, var(--primary-main), #083144);
+}
+
+/* Haritalar için Resim Ayarı */
+.map-thumb {
+    background: #083144; /* Resim yoksa arka plan */
+    padding: 0 !important; /* Resim varsa padding olmasın */
+}
+
+.map-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0.6; /* Yazının okunması için biraz karart */
+    transition: opacity 0.3s;
+}
+
+/* Harita kartının üzerine gelince resim netleşsin */
+.product-card-new:hover .map-thumb img {
+    opacity: 0.3; /* Hoverda resmi daha silik yapıp yazıyı öne çıkarabiliriz veya tam tersi */
+}
+
+/* Harita üzerindeki yazı ve ikonlar resmin üstünde kalmalı */
+.map-thumb span, .map-thumb i {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Sağ İçerik */
+.product-card-new .product-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-new .tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.product-card-new .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.product-card-new .description {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Özellik Listesi */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.feature::before {
+    content: "\f00c"; /* FontAwesome check */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--primary-main);
+    font-size: 1rem;
+}
+
+/* ======= PARLATMA & LINK EFEKTİ (ÖNEMLİ) ======= */
+
+/* URL #id ile eşleşirse çalışacak animasyon */
+.product-card-new:target {
+    animation: pulse-glow 2.5s ease-out forwards;
+    border: 2px solid var(--primary-main);
+}
+
+@keyframes pulse-glow {
+     0% {
+         box-shadow: 0 0 0 0 rgba(26, 126, 99, 0.7);
+         transform: scale(1);
+     }
+     50% {
+         box-shadow: 0 0 30px 10px rgba(26, 126, 99, 0.2);
+         transform: scale(1.02);
+     }
+     100% {
+         box-shadow: 0 0 15px rgba(26, 126, 99, 0.4);
+         transform: scale(1);
+     }
+ }
+
+/* MOBİL UYUMLULUK */
+@media (max-width: 768px) {
+    .product-card-new { flex-direction: column; }
+
+    .product-card-new .thumb {
+        flex: 0 0 180px; /* Mobilde yükseklik */
+        padding: 20px;
+        /* Mobilde resim varsa tam kaplasın */
+    }
+    .map-thumb img { opacity: 0.4; } /* Mobilde yazı okunsun diye sabit opacity */
+
+    .product-card-new .product-content { padding: 20px; }
+    .feature-list { grid-template-columns: 1fr; }
+}
+/* ======= TARGET LINK ANIMASYONU ======= */
+
+/* URL'deki ID ile eşleşen kartı yakalar (Örn: #webrisk) */
+.product-card-new:target {
+    /* Animasyon Adı | Süre | Hız Eğrisi | Tekrar Sayısı */
+    animation: flash-glow 1s ease-in-out 2;
+
+    /* Navbar yüksekliği kadar pay bırak (Kart başlığının menü altında kalmaması için) */
+    scroll-margin-top: 120px;
+
+    /* Animasyon bitince kenarlık belirgin kalsın istersen bunu açabilirsin: */
+    /* border-color: var(--primary-main); */
+}
+
+/* Yanıp Sönme (Flaş) Efekti Keyframes */
+@keyframes flash-glow {
+     0% {
+         box-shadow: 0 0 0 0 rgba(26, 126, 99, 0);
+         transform: scale(1);
+         border-color: rgba(0,0,0,0.1); /* Varsayılan border */
+     }
+     50% {
+         /* Işık Parlaması */
+         box-shadow: 0 0 20px 5px rgba(26, 126, 99, 0.6);
+         transform: scale(1.02); /* Hafifçe büyür */
+         border-color: #1A7E63; /* GRIT Yeşili */
+     }
+     100% {
+         box-shadow: 0 0 0 0 rgba(26, 126, 99, 0);
+         transform: scale(1);
+         border-color: rgba(0,0,0,0.1);
+     }
+ }
+/* ======= YENİ EKLENEN TEKNİK DETAY KUTUSU ======= */
+.product-details-box {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color); /* Ayrım çizgisi */
+    background-color: rgba(0, 0, 0, 0.02); /* Çok hafif gri arka plan */
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.product-details-box .detail-row {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.product-details-box .detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.product-details-box strong {
+    color: var(--primary-main); /* Başlıkları renkli yap */
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+
+/* ======= KARE RESİM GENEL AYARI (TÜM KARTLAR İÇİN) ======= */
+/* ======= RESMİ KART YÜKSEKLİĞİNE EŞİTLEME ======= */
+
+/* Sol taraftaki resim kutusu */
+.product-card-new .thumb.square-image-box {
+    /* 1. Genişliği sabit tut (Örn: 260px) */
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    max-width: 260px !important;
+
+    /* 2. Yüksekliği serbest bırak (Yanındaki yazı kadar uzasın) */
+    height: auto !important;
+    min-height: 100%; /* Kartın boyu neyse o olsun */
+
+    /* Kare zorunluluğunu kaldırıyoruz */
+    aspect-ratio: auto !important;
+
+    padding: 0 !important;
+    position: relative; /* İçindeki resim buna tutunacak */
+    overflow: hidden;
+}
+
+/* Resmin ayarları */
+.product-card-new .thumb.square-image-box img {
+    /* Resmi kutunun sol üstüne çivile ve her yöne %100 uzat */
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+
+    /* Resmi sündürmeden, alanı dolduracak şekilde kırp */
+    object-fit: cover !important;
+    display: block;
+}
+
+
+/* ======= RESPONSIVE DÜZENLEMELER ======= */
+
+/* Tablet Yatay (992px - 1199px) */
+@media (max-width: 1199px) {
+    .product-card-new .thumb {
+        flex: 0 0 240px;
+    }
+
+    .product-card-new .thumb.square-image-box {
+        flex: 0 0 240px !important;
+        width: 240px !important;
+        max-width: 240px !important;
+    }
+
+    .product-card-new .product-content {
+        padding: 25px;
+    }
+
+    .product-card-new .title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablet Dikey (768px - 991px) */
+@media (max-width: 991px) {
+    .product-category-header {
+        font-size: 1.1rem;
+        padding-left: 12px;
+    }
+
+    .product-card-new {
+        flex-direction: column;
+    }
+
+    .product-card-new .thumb {
+        flex: 0 0 250px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 250px !important;
+        min-height: auto !important;
+        padding: 0 !important;
+    }
+
+    .product-card-new .thumb.square-image-box {
+        flex: 0 0 250px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 250px !important;
+        padding: 0 !important;
+    }
+
+    /* Yazılım kartları için özel ayar - RESMİN TAMAMI GÖZÜKSÜN */
+    .software-thumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px !important;
+        background: linear-gradient(135deg, var(--primary-main), #083144);
+    }
+
+    .software-thumb img {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important; /* Resmin tamamı görünsün */
+    }
+
+    /* Harita kartları - RESMİN TAMAMI GÖZÜKSÜN */
+    .map-thumb {
+        padding: 0 !important;
+    }
+
+    .map-thumb img {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important; /* Cover yerine contain - resmin tamamı görünsün */
+        opacity: 1 !important; /* Daha net görünsün */
+    }
+
+    .product-card-new .product-content {
+        padding: 20px;
+    }
+
+    .product-card-new .title {
+        font-size: 1.25rem;
+    }
+
+    .product-card-new .description {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding-top: 15px;
+    }
+
+    .feature {
+        font-size: 0.85rem;
+    }
+
+    .product-details-box {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+}
+
+/* Mobil Geniş (576px - 767px) */
+@media (max-width: 767px) {
+    .products-list {
+        gap: 20px;
+    }
+
+    .product-card-new .thumb {
+        height: 220px !important;
+        padding: 0 !important;
+    }
+
+    .product-card-new .thumb.square-image-box {
+        height: 220px !important;
+        padding: 0 !important;
+    }
+
+    .software-thumb {
+        padding: 15px !important;
+    }
+
+    .software-thumb img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .map-thumb img {
+        object-fit: contain !important;
+        opacity: 1 !important;
+    }
+
+    .product-card-new .product-content {
+        padding: 18px;
+    }
+
+    .product-card-new .tag {
+        font-size: 0.75rem;
+    }
+
+    .product-card-new .title {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+
+    .product-card-new .description {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .feature {
+        font-size: 0.8rem;
+    }
+
+    .feature::before {
+        font-size: 0.9rem;
+        margin-right: 8px;
+    }
+
+    .product-details-box {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .product-details-box .detail-row {
+        margin-bottom: 6px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Mobil Küçük (max 575px) */
+@media (max-width: 575px) {
+    .product-category-header {
+        font-size: 1rem;
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+
+    .products-list {
+        gap: 15px;
+    }
+
+    .product-card-new {
+        border-radius: 12px;
+    }
+
+    .product-card-new .thumb {
+        height: 200px !important;
+        padding: 0 !important;
+    }
+
+    .product-card-new .thumb.square-image-box {
+        height: 200px !important;
+        padding: 0 !important;
+    }
+
+    .software-thumb {
+        padding: 12px !important;
+    }
+
+    .software-thumb img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .map-thumb img {
+        object-fit: contain !important;
+        opacity: 1 !important;
+    }
+
+    .product-card-new .product-content {
+        padding: 15px;
+    }
+
+    .product-card-new .tag {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+
+    .product-card-new .title {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .product-card-new .description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .feature-list {
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    .feature {
+        font-size: 0.75rem;
+    }
+
+    .feature::before {
+        font-size: 0.8rem;
+        margin-right: 6px;
+    }
+
+    .product-details-box {
+        margin-top: 12px;
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+
+    .product-details-box .detail-row {
+        margin-bottom: 5px;
+    }
+}
+
+/* Mobil Çok Küçük (max 375px) */
+@media (max-width: 375px) {
+    .product-card-new .thumb {
+        height: 160px !important;
+    }
+
+    .product-card-new .thumb.square-image-box {
+        height: 160px !important;
+    }
+
+    .product-card-new .title {
+        font-size: 1rem;
+    }
+
+    .product-card-new .description {
+        font-size: 0.8rem;
+    }
+
+    .feature {
+        font-size: 0.7rem;
+    }
+}

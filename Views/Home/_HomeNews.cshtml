@@ -1,0 +1,275 @@
+@using System.Text.Json
+@using Microsoft.AspNetCore.Mvc.Localization
+@model IEnumerable<GRIT.Web.Models.DTO.GetNewsItemDto>
+
+@inject IViewLocalizer Localizer
+
+@{
+var jsonOptions = new JsonSerializerOptions { PropertyNamingPolicy = null };
+var newsJson = JsonSerializer.Serialize(Model, jsonOptions);
+}
+
+<section id="news" class="news-section section-padding">
+    <div class="container">
+        <div class="section-header text-center mb-5 pt-5">
+            <h2 class="section-title">@Localizer["Bizden Haberler"]</h2>
+            <p class="section-desc" style="color:var(--text-secondary)">
+                @Localizer["GRİT ekosisteminden en son teknoloji haberleri, röportajlar ve canlı yayınlar"]
+            </p>
+        </div>
+
+        <div class="slider-container-wrapper">
+            <button class="nav-btn prev-btn d-none d-lg-flex" id="prevBtn" type="button">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn next-btn d-none d-lg-flex" id="nextBtn" type="button">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="slider-track" id="sliderTrack">
+                @foreach (var news in Model)
+                {
+                <div class="slide">
+                    <article class="news-card" onclick="openNewsModal(@news.Id)">
+                        <div class="card-image">
+                            @if(!string.IsNullOrEmpty(news.VideoEmbed))
+                            {
+                            <div class="play-icon-overlay">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            }
+                            <img src="@news.Image" alt="@news.Title" loading="lazy">
+                            <span class="card-category">@news.Category</span>
+                            <div class="image-overlay">
+                                <span class="read-text">@Localizer["İncele"]</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar-alt"></i> @news.Date</span>
+                            </div>
+                            <h3 class="card-title">@news.Title</h3>
+                            <p class="card-summary">@news.Summary</p>
+                            <div class="card-footer">
+                                <div class="author">
+                                    <div class="author-avatar">@news.Author.Substring(0,1)</div>
+                                    <span>@news.Author</span>
+                                </div>
+                                <div class="card-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                }
+            </div>
+
+            <div class="mobile-controls d-flex d-lg-none">
+                <button class="nav-btn" id="mobilePrev" type="button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <button class="nav-btn" id="mobileNext" type="button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal: Haber Detayı -->
+<div class="modal fade" id="newsDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header border-0 pb-0">
+                <div class="d-flex align-items-center">
+                    <div class="modal-icon-box me-3">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div>
+                        <span class="badge bg-warning mb-1" id="m-badge"></span>
+                        <h5 class="modal-title fs-5 fw-bold mb-0" id="m-title"></h5>
+                    </div>
+                </div>
+                <button type="button" class="btn-close-custom" data-bs-dismiss="modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="tabs-container mb-4">
+                    <ul class="nav nav-pills custom-nav-pills" id="newsTabs" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-detail">
+                                @Localizer["Detaylar"]
+                            </button>
+                        </li>
+                       
+                       
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-detail">
+                        <div class="row g-4">
+                            <div class="col-lg-8">
+                                <div id="media-container" class="w-100 rounded-4 mb-4 shadow-sm overflow-hidden" style="height: 350px; background:#000;"></div>
+                                <div id="m-desc" class="content-text"></div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="info-card h-100">
+                                    <h6 class="info-title border-bottom pb-2 mb-3">@Localizer["Haber Bilgileri"]</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3"><i class="far fa-calendar me-2 text-primary"></i> <span id="m-date"></span></li>
+                                        <li class="mb-3"><i class="far fa-newspaper me-2 text-primary"></i> <span id="m-author"></span></li>
+                                    </ul>
+                                    <div id="m-external-link-container" class="mt-4">
+                                        <a href="#" id="m-external-link" target="_blank" class="btn btn-outline-primary w-100">
+                                            <i class="fas fa-external-link-alt me-2"></i>@Localizer["Kaynağa Git"]
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 pt-0">
+                <button class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">@Localizer["Kapat"]</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Lightbox -->
+<div class="modal fade" id="imageLightbox" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content bg-transparent border-0">
+            <button type="button" class="lightbox-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body p-0 d-flex justify-content-center align-items-center position-relative" onclick="closeLightbox(event)">
+                <img id="lightboxImage" src="" class="img-fluid shadow-lg rounded" style="max-height: 90vh; max-width: 90vw; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const newsData = @Html.Raw(newsJson);
+
+    const jsTranslations = {
+        youtubeWatch: decodeURIComponent('@Uri.EscapeDataString(Localizer["Videoyu YouTube\'da İzle"].Value)'),
+        goToSource: '@Localizer["Kaynağa Git"]'
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('sliderTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const mobPrev = document.getElementById('mobilePrev');
+        const mobNext = document.getElementById('mobileNext');
+        const progressBar = document.getElementById('progressBar');
+
+        if (!track) return;
+
+        const updateUI = () => {
+            const scrollLeft = track.scrollLeft;
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            const isStart = scrollLeft <= 10;
+            const isEnd = scrollLeft >= (maxScroll - 10);
+
+            if (prevBtn) prevBtn.disabled = isStart;
+            if (nextBtn) nextBtn.disabled = isEnd;
+            if (mobPrev) mobPrev.disabled = isStart;
+            if (mobNext) mobNext.disabled = isEnd;
+
+            if (progressBar && maxScroll > 0) {
+                const progress = (scrollLeft / maxScroll) * 100;
+                progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+            }
+        };
+
+        const slide = (direction) => {
+            const slideWidth = 375;
+            const scrollAmount = direction === 'next' ? slideWidth : -slideWidth;
+            track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            setTimeout(updateUI, 400);
+        };
+
+        if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); slide('prev'); });
+        if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); slide('next'); });
+        if (mobPrev) mobPrev.addEventListener('click', (e) => { e.preventDefault(); slide('prev'); });
+        if (mobNext) mobNext.addEventListener('click', (e) => { e.preventDefault(); slide('next'); });
+
+        track.addEventListener('scroll', () => requestAnimationFrame(updateUI));
+        window.addEventListener('resize', updateUI);
+        setTimeout(updateUI, 100);
+
+        const newsModalEl = document.getElementById('newsDetailModal');
+        if (newsModalEl) {
+            newsModalEl.addEventListener('hidden.bs.modal', function() {
+                const mediaContainer = document.getElementById('media-container');
+                if (mediaContainer) mediaContainer.innerHTML = "";
+            });
+        }
+    });
+
+    function openNewsModal(id) {
+        const news = newsData.find(n => n.Id === id);
+        if (!news) return;
+
+        document.getElementById('m-title').innerText = news.Title;
+        document.getElementById('m-badge').innerText = news.Category;
+        document.getElementById('m-desc').innerHTML = news.Details?.Description || news.Summary;
+        document.getElementById('m-date').innerText = news.Date;
+        document.getElementById('m-author').innerText = news.Author;
+
+        const mediaContainer = document.getElementById('media-container');
+        if (news.VideoEmbed && news.VideoEmbed !== "") {
+            mediaContainer.innerHTML = `<iframe src="${news.VideoEmbed}" class="modal-video-frame" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+        } else {
+            mediaContainer.innerHTML = `<img src="${news.Image}" class="w-100 h-100" style="object-fit: cover;">`;
+        }
+
+        const extLinkContainer = document.getElementById('m-external-link-container');
+        const extLinkBtn = document.getElementById('m-external-link');
+
+        if (news.ExternalUrl && news.ExternalUrl !== "") {
+            extLinkContainer.classList.remove('d-none');
+            extLinkBtn.href = news.ExternalUrl;
+            if (news.Category === "Video") {
+                extLinkBtn.innerHTML = `<i class="fab fa-youtube me-2"></i>${jsTranslations.youtubeWatch}`;
+            } else {
+                extLinkBtn.innerHTML = `<i class="fas fa-external-link-alt me-2"></i>${jsTranslations.goToSource}`;
+            }
+        } else {
+            extLinkContainer.classList.add('d-none');
+        }
+
+
+        if (typeof bootstrap !== 'undefined') {
+            new bootstrap.Modal(document.getElementById('newsDetailModal')).show();
+            const firstTab = document.querySelector('#newsTabs button[data-bs-target="#tab-detail"]');
+            bootstrap.Tab.getInstance(firstTab)?.show() || new bootstrap.Tab(firstTab).show();
+        }
+    }
+
+    function openLightbox(imgSrc) {
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxModal = new bootstrap.Modal(document.getElementById('imageLightbox'));
+        lightboxImg.src = imgSrc;
+        lightboxModal.show();
+    }
+
+    function closeLightbox(event) {
+        if (event.target.id !== 'lightboxImage') {
+            const modalEl = document.getElementById('imageLightbox');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            if (modal) modal.hide();
+        }
+    }
+</script>

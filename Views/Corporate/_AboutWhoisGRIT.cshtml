@@ -1,0 +1,55 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<section id="about-preview" class="about-preview-section section-padding">
+    <div class="bg-pattern-dots"></div>
+
+    <div class="container position-relative z-2 mt-4">
+
+        <div class="row mb-4">
+            <div class="col-12 text-center mt-4">
+                <h2 class="section-title center" data-aos="fade-up">@Localizer["Hakkımızda"]</h2>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <p class="lead text-center about-paragraph" data-aos="fade-up">
+                    @Localizer["GRİT Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. Tic. Ltd. Şti., akademik yetkinlikleri sayesinde sigorta ve reasürans şirketleri için bilimsel temellere dayalı yenilikçi çözümler üreten bir Teknopark şirketidir."]
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-3">
+
+            <div class="col-12" data-aos="fade-right">
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                    </div>
+                    <div class="feature-content">
+                        <h4>@Localizer["MİSYON"]</h4>
+                        <p>
+                            @Localizer["Sigorta ve reasürans sektörleri için doğal afet risklerine karşı bilimsel temelli, yüksek çözünürlüklü ve doğruluk oranı yüksek duyarlılık haritaları ile WebCBS tabanlı yenilikçi yazılım çözümleri sunarak; müşterilerimizin risk yönetimi kararlarını güçlendirmek."]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12" data-aos="fade-left">
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                    </div>
+                    <div class="feature-content">
+                        <h4>@Localizer["VİZYON"]</h4>
+                        <p>
+                            @Localizer["Türkiye ve diğer ülkelerde, coğrafi risk değerlendirmesinde referans kuruluş olmak; yapay zeka, makine öğrenmesi ve ileri haritalama teknolojileri ile sektördeki dönüşümü liderlik ederek yönlendirmek."]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

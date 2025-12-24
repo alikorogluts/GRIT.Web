@@ -1,0 +1,95 @@
+
+/* ======= TEAM SECTION STYLES ======= */
+
+.team-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Efekti: Kart yukarı kalkar */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--primary-main, #1A7E63);
+}
+
+/* Fotoğraf Çerçevesi */
+.img-wrapper {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid var(--primary-main, #1A7E63); /* Marka rengi çerçeve */
+    background: #fff;
+    position: relative;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover; /* Fotoğrafın oranını bozmadan yuvarlağa sığdırır */
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .img-wrapper img {
+    transform: scale(1.05); /* Hoverda resim hafif büyür */
+}
+
+/* İsim ve Unvanlar */
+.team-content .name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary, #333);
+    margin-bottom: 5px;
+}
+
+.team-content .role {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--primary-main, #1A7E63);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Küçük ayırıcı çizgi */
+.divider-small {
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color, #E9C46A); /* Vurgu rengi (Sarı) */
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Uzmanlık Alanları Metni */
+.team-content .expertise {
+    color: var(--text-secondary, #666);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Mobilde boşluk ayarı */
+@media (max-width: 768px) {
+    .team-card {
+        margin-bottom: 15px;
+    }
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-secondary, #666);
+    font-size: 1.2rem;
+}

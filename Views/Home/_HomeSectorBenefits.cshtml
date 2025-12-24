@@ -1,0 +1,152 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<section id="sector-benefits" class="benefits-section section-padding">
+    <div class="container">
+        
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <h2 class="section-title" data-aos="fade-up">@Localizer["Sektöre Katkılarımız"]</h2>
+                <p class="section-desc" data-aos="fade-up" data-aos-delay="100">
+                    @Localizer["GRİT’in yüksek çözünürlüklü duyarlılık haritaları ve makine öğrenmesi modelleri; fiyatlama, poliçe kabulü ve reasürans süreçlerinde sigorta şirketlerine doğrudan finansal avantaj sağlar."]
+                </p>
+            </div>
+        </div>
+
+        <div class="comparison-box mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center text-md-start mb-4 mb-md-0">
+                    <h4 class="comp-title">@Localizer["Neden GRİT?"]</h4>
+                    <p class="comp-desc">@Localizer["Geleneksel yöntemler ile GRİT teknolojisi arasındaki fark."]</p>
+                </div>
+
+                <div class="col-md-7">
+                    <ul class="comp-list">
+                
+                        <li>
+                            <div class="comp-label">
+                                <span class="icon-badge bg-red"><i class="fas fa-times"></i></span>
+                                @Localizer["Mevcut Sistem:"]
+                            </div>
+                            <div class="comp-value">
+                                @Localizer["Eksik veri, Yüksek Risk"]
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="comp-label">
+                                <span class="icon-badge bg-blue"><i class="fas fa-check"></i></span>
+                                @Localizer["GRİT Çözümü:"]
+                            </div>
+                            <div class="comp-value">
+                                @Localizer["Eksiksiz + Doğru Veri , Doğru Risk Fiyatlaması"]
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="comp-label">
+                                <span class="icon-badge bg-blue "><i class="fas fa-check"></i></span>
+                                @Localizer["Sonuç:"]
+                            </div>
+                            <div class="comp-value">
+                                @Localizer["%90+ Doğruluk & %100 Poliçe Kapsama & 10 m Çözünürlük"]
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="benefit-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h4>@Localizer["Doğru Fiyatlama"]</h4>
+                    <p>@Localizer["Her poliçe için detaylı risk skoru sağlar. Aktüeryal modellere entegre edilebilen coğrafi veriler sayesinde yanlış fiyatlamadan doğan zararları minimize eder."]</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="benefit-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h4>@Localizer["Poliçe Kabul & UW"]</h4>
+                    <p>@Localizer["Saha incelemesi öncesi adres/koordinat bazlı hızlı risk değerlendirmesi sunar. Kabul kararları hızlanır ve saha ekipleri riskli bölgelere odaklanır."]</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="benefit-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>@Localizer["Hasar Azaltma"]</h4>
+                    <p>@Localizer["Yüksek riskli lokasyonların belirlenmesi, zarar azaltma yatırımlarının doğru hedeflenmesi ve acil müdahale planlarının oluşturulması için kritik veri sağlar."]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-4">
+            <div class="col-12 mb-4">
+                <h3 class="scenario-header">@Localizer["Kullanım Senaryoları"]</h3>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="scenario-item">
+                    <div class="sc-icon"><i class="fas fa-user-check"></i></div>
+                    <div class="sc-content">
+                        <h5>@Localizer["Underwriting (UW) Karar Desteği"]</h5>
+                        <p>@Localizer["Poliçe kabulünde adres/koordinat bazlı risk skorları ile kabul süreçleri hızlanır ve standartlaşır."]</p>
+                    </div>
+                </div>
+                
+                <div class="scenario-item">
+                    <div class="sc-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="sc-content">
+                        <h5>@Localizer["Fiyatlama & Aktüerya"]</h5>
+                        <p>@Localizer["Mekânsal risk dağılımı ile daha doğru ve rekabetçi tarife modelleri geliştirilmesine katkı sağlar."]</p>
+                    </div>
+                </div>
+
+                <div class="scenario-item">
+                    <div class="sc-icon"><i class="fas fa-house-damage"></i></div>
+                    <div class="sc-content">
+                        <h5>@Localizer["Hasar Yönetimi"]</h5>
+                        <p>@Localizer["Olay sonrası zarar gören alanların hızlı tespiti ve rezerv hesaplamaları ile hasar yönetimi etkinleşir."]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="scenario-item">
+                    <div class="sc-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="sc-content">
+                        <h5>@Localizer["Reasürans Görüşmeleri"]</h5>
+                        <p>@Localizer["Validasyonlu haritalar reasürans pazarlığınızı güçlendirir; portföy riskini şeffaf ve net olarak gösterir."]</p>
+                    </div>
+                </div>
+
+                <div class="scenario-item">
+                    <div class="sc-icon"><i class="fas fa-globe-europe"></i></div>
+                    <div class="sc-content">
+                        <h5>@Localizer["Portföy Analizi"]</h5>
+                        <p>@Localizer["Bölgesel yoğunluklar, OSB ve sanayi bölgeleri için özel analizler; felaket durumunda portföy etkilerini simüle etme olanağı."]</p>
+                    </div>
+                </div>
+
+                <div class="scenario-item">
+                    <div class="sc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="sc-content">
+                        <h5>@Localizer["Sahada Risk Tespiti"]</h5>
+                        <p>@Localizer["Saha ekiplerinin keşif, ekspertiz ve yerinde inceleme süreçlerinde daha isabetli değerlendirmeler yapmalarına olanak sağlar."]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

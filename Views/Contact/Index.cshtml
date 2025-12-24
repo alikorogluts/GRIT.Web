@@ -1,0 +1,195 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@using System.Globalization
+
+@{
+    // Basit Kontrol: Dil İngilizce mi?
+    var isEnglish = CultureInfo.CurrentUICulture.Name.StartsWith("en");
+
+    // Tek satırda çeviri: İngilizce ise "Corporate", değilse "Kurumsal"
+    ViewData["Title"] = isEnglish ? "Contact" : "İletişim";
+}
+
+@section Styles {
+    <link href="~/css/page/contact/contact.css" rel="stylesheet" />
+}
+
+<section class="contact-hero">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative z-2">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8" data-aos="fade-up">
+                <h1 class="display-4 fw-bold mb-3 ">@Localizer["Bizimle İletişime Geçin"]</h1>
+                <p class="lead mb-0">
+                    @Localizer["Proje ve işbirliği önerileriniz, detaylı sunu talepleriniz veya sorularınız için her zaman yanınızdayız."]
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-info-section">
+    <div class="container">
+        <div class="row g-4 mt-n5 position-relative z-3">
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="contact-card h-100">
+                    <div class="icon-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4 class="card-title">@Localizer["Adres"]</h4>
+                    <p class="card-text">
+                        @Localizer["OMÜ Teknopark"]<br>
+                        @Localizer["Aksu Mahallesi, Yurt Sokak"]<br>
+                        @Localizer["No: 165, Atakum / Samsun"]
+                    </p>
+                    <a href="#map" class="link-custom">@Localizer["Haritada Gör"] <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-card h-100">
+                    <div class="icon-box">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h4 class="card-title">@Localizer["Telefon"]</h4>
+                    <p class="card-text mb-1">+90 (362) 502 00 61</p>
+                    <p class="card-text small">@Localizer["Faks:"] +90 (362) 457 56 46</p>
+                    <a href="tel:+90(362)5020061" class="link-custom">@Localizer["Hemen Ara"] <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-card h-100">
+                    <div class="icon-box">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4 class="card-title">@Localizer["E-posta"]</h4>
+                    <p class="card-text mb-1">info@grit.com.tr</p>
+                    <p class="card-text small">@Localizer["Ortalama yanıt süresi: 24 Saat"]</p>
+                    <a href="mailto:info@grit.com.tr" class="link-custom">@Localizer["Mail Gönder"] <i class="fas fa-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="form-map-section section-padding">
+    <div class="container">
+        <div class="row g-5 align-items-stretch">
+            
+            <div class="col-lg-7" data-aos="fade-right">
+                <div class="form-wrapper">
+                    <div class="section-title-wrap mb-4">
+                        <h3 class="fw-bold section-heading">@Localizer["Bize Mesaj Gönderin"]</h3>
+                        <p class="section-desc">@Localizer["Formu doldurun, uzman ekibimiz sizinle iletişime geçsin."]</p>
+                    </div>
+
+                    <form id="contactForm">
+                        @Html.AntiForgeryToken()
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">@Localizer["Adınız Soyadınız"]</label>
+                                    <input type="text" name="NameSurname" class="form-control" id="name" 
+                                           placeholder="@Localizer["Örn: Ahmet Yılmaz"]" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">@Localizer["E-posta Adresiniz"]</label>
+                                    <input type="email" name="Email" class="form-control" id="email" 
+                                           placeholder="ornek@sirket.com" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">@Localizer["Telefon Numaranız"]</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control"
+                                        name="Phone"
+                                        id="phone"
+                                        placeholder="0555 555 55 55"
+                                        pattern="^0?[5][0-9]{9}$"
+                                        maxlength="11"
+                                        inputmode="numeric"
+                                        required
+                                        title="@Localizer["Lütfen geçerli bir telefon numarası girin. Örnek: 0555 555 55 55"]"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">@Localizer["Konu"]</label>
+                                    <select class="form-select" name="Subject" id="subject" required>
+                                        <option value="" selected disabled>@Localizer["Seçiniz"]</option>
+                                        <option value="Demo/Sunum Talep">@Localizer["Demo/Sunum Talep"]</option>
+                                        <option value="Satış & Teklif">@Localizer["Satış & Teklif"]</option>
+                                        <option value="Teknik Destek">@Localizer["Teknik Destek"]</option>
+                                        <option value="İş Birliği">@Localizer["İş Birliği"]</option>
+                                        <option value="Diğer">@Localizer["Diğer"]</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="message" class="form-label">@Localizer["Mesajınız"]</label>
+                                    <textarea class="form-control" name="Message" id="message" rows="5" 
+                                              placeholder="@Localizer["Mesajınızı buraya yazın..."]" 
+                                              maxlength="500" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100 py-3">
+                                    <i class="fas fa-paper-plane me-2"></i>@Localizer["Mesajı Gönder"]
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left">
+                <div class="map-wrapper h-100 d-flex flex-column">
+                    <div id="map" class="flex-grow-1 rounded-4 shadow-sm" style="min-height: 400px;">
+                        </div>
+                    
+                    <div class="social1-box mt-4 p-4 rounded-4">
+                        <h5 class="mb-3 fw-bold section-heading">@Localizer["Sosyal Medya"]</h5>
+                        <div class="d-flex gap-3">
+                            <a href="https://www.linkedin.com/in/grit-co%C4%9Frafi-risk-7aa36a398/" class="social1-btn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/55_ingrit_55/" class="social1-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+</section>
+@section Scripts {
+    <script>
+        // O anki dil kodunu alıyoruz (Örn: "tr", "en", "en-US")
+        var currentLang = '@System.Globalization.CultureInfo.CurrentUICulture.Name'; 
+        // Sadece ilk 2 harfi al (en-US -> en olsun)
+        var shortLang = currentLang.substring(0, 2);
+
+        window.formTranslations = {
+            // 1. DİL KODU (Bunu ekledik)
+            languageCode: shortLang, 
+
+            // ... Diğerleri aynen kalıyor ...
+            apiUrl: '@Url.Action("SendMessage", "Contact")',
+            mapLoading: '@Localizer["Harita Yükleniyor..."]',
+            sending: '@Localizer["Gönderiliyor..."]',
+            connectionError: '@Localizer["Sunucuya ulaşılamadı. İnternet bağlantınızı kontrol edin."]',
+            errorMessage: '@Localizer["Bir hata oluştu. Lütfen tekrar deneyin."]',
+            successTitle: '@Localizer["Başarılı!"]',
+            errorTitle: '@Localizer["Hata!"]'
+        };
+    </script>
+    <script src="~/js/page/contact/contact.js"></script>
+}

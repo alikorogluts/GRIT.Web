@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+  <data name="Sektöre Katkılarımız" xml:space="preserve">
+    <value>Industry Benefits</value>
+  </data>
+  
+  <data name="GRİT’in yüksek çözünürlüklü duyarlılık haritaları ve makine öğrenmesi modelleri; fiyatlama, poliçe kabulü ve reasürans süreçlerinde sigorta şirketlerine doğrudan finansal avantaj sağlar." xml:space="preserve">
+    <value>GRIT's high-resolution susceptibility maps and machine learning models provide direct financial advantages to insurance companies in pricing, policy acceptance, and reinsurance processes.</value>
+  </data>
+
+  <data name="Neden GRİT?" xml:space="preserve">
+    <value>Why GRIT?</value>
+  </data>
+  <data name="Geleneksel yöntemler ile GRİT teknolojisi arasındaki fark." xml:space="preserve">
+    <value>The difference between traditional methods and GRIT technology.</value>
+  </data>
+  
+  <data name="Mevcut Sistem:" xml:space="preserve">
+    <value>Current System:</value>
+  </data>
+  <data name="Eksik veri, Yüksek Risk" xml:space="preserve">
+    <value>Incomplete Data, High Risk</value>
+  </data>
+  
+  <data name="GRİT Çözümü:" xml:space="preserve">
+    <value>GRIT Solution:</value>
+  </data>
+  <data name="Eksiksiz + Doğru Veri , Doğru Risk Fiyatlaması" xml:space="preserve">
+    <value>Complete + Accurate Data, Accurate Risk Pricing</value>
+  </data>
+  
+  <data name="Sonuç:" xml:space="preserve">
+    <value>Result:</value>
+  </data>
+  <data name="%90+ Doğruluk &amp; %100 Poliçe Kapsama &amp; 10 m Çözünürlük" xml:space="preserve">
+    <value>90%+ Accuracy &amp; 100% Policy Coverage &amp; 10m Resolution</value>
+  </data>
+
+  <data name="Doğru Fiyatlama" xml:space="preserve">
+    <value>Accurate Pricing</value>
+  </data>
+  <data name="Her poliçe için detaylı risk skoru sağlar. Aktüeryal modellere entegre edilebilen coğrafi veriler sayesinde yanlış fiyatlamadan doğan zararları minimize eder." xml:space="preserve">
+    <value>Provides detailed risk scores for each policy. Minimizes losses arising from mispricing through geographic data that can be integrated into actuarial models.</value>
+  </data>
+
+  <data name="Poliçe Kabul &amp; UW" xml:space="preserve">
+    <value>Policy Acceptance &amp; UW</value>
+  </data>
+  <data name="Saha incelemesi öncesi adres/koordinat bazlı hızlı risk değerlendirmesi sunar. Kabul kararları hızlanır ve saha ekipleri riskli bölgelere odaklanır." xml:space="preserve">
+    <value>Offers rapid address/coordinate-based risk assessment before site surveys. Accelerates acceptance decisions and focuses field teams on high-risk areas.</value>
+  </data>
+
+  <data name="Hasar Azaltma" xml:space="preserve">
+    <value>Loss Mitigation</value>
+  </data>
+  <data name="Yüksek riskli lokasyonların belirlenmesi, zarar azaltma yatırımlarının doğru hedeflenmesi ve acil müdahale planlarının oluşturulması için kritik veri sağlar." xml:space="preserve">
+    <value>Provides critical data for identifying high-risk locations, targeting mitigation investments, and creating emergency response plans.</value>
+  </data>
+
+  <data name="Kullanım Senaryoları" xml:space="preserve">
+    <value>Use Cases</value>
+  </data>
+
+  <data name="Underwriting (UW) Karar Desteği" xml:space="preserve">
+    <value>Underwriting (UW) Decision Support</value>
+  </data>
+  <data name="Poliçe kabulünde adres/koordinat bazlı risk skorları ile kabul süreçleri hızlanır ve standartlaşır." xml:space="preserve">
+    <value>Acceptance processes are accelerated and standardized with address/coordinate-based risk scores in policy underwriting.</value>
+  </data>
+
+  <data name="Fiyatlama &amp; Aktüerya" xml:space="preserve">
+    <value>Pricing &amp; Actuarial</value>
+  </data>
+  <data name="Mekânsal risk dağılımı ile daha doğru ve rekabetçi tarife modelleri geliştirilmesine katkı sağlar." xml:space="preserve">
+    <value>Contributes to developing more accurate and competitive tariff models through spatial risk distribution analysis.</value>
+  </data>
+
+  <data name="Hasar Yönetimi" xml:space="preserve">
+    <value>Claims Management</value>
+  </data>
+  <data name="Olay sonrası zarar gören alanların hızlı tespiti ve rezerv hesaplamaları ile hasar yönetimi etkinleşir." xml:space="preserve">
+    <value>Claims management becomes more effective with rapid post-event damage detection and reserve calculations.</value>
+  </data>
+
+  <data name="Reasürans Görüşmeleri" xml:space="preserve">
+    <value>Reinsurance Negotiations</value>
+  </data>
+  <data name="Validasyonlu haritalar reasürans pazarlığınızı güçlendirir; portföy riskini şeffaf ve net olarak gösterir." xml:space="preserve">
+    <value>Validated maps strengthen your reinsurance bargaining; they display portfolio risk transparently and clearly.</value>
+  </data>
+
+  <data name="Portföy Analizi" xml:space="preserve">
+    <value>Portfolio Analysis</value>
+  </data>
+  <data name="Bölgesel yoğunluklar, OSB ve sanayi bölgeleri için özel analizler; felaket durumunda portföy etkilerini simüle etme olanağı." xml:space="preserve">
+    <value>Specific analyses for regional density, OIZs, and industrial zones; ability to simulate portfolio impacts in catastrophe scenarios.</value>
+  </data>
+
+  <data name="Sahada Risk Tespiti" xml:space="preserve">
+    <value>On-Field Risk Assessment</value>
+  </data>
+  <data name="Saha ekiplerinin keşif, ekspertiz ve yerinde inceleme süreçlerinde daha isabetli değerlendirmeler yapmalarına olanak sağlar." xml:space="preserve">
+    <value>Enables field teams to make more accurate assessments during survey, expertise (loss adjustment), and on-site inspection processes.</value>
+  </data>
+
+</root>

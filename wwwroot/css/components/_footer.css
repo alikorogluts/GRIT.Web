@@ -1,0 +1,280 @@
+/* ======= FOOTER TEMEL AYARLAR ======= */
+.footer-section {
+    background: var(--black);
+    color: var(--white);
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+    position: relative; /* Işık efektleri için gerekli */
+    overflow: hidden;   /* Işıkların taşmasını engeller */
+}
+
+/* İçeriğin ışık efektinin üzerinde kalmasını ve tıklanabilir olmasını sağlar */
+.footer-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ======= LOGO ======= */
+/* ======= LOGO IŞIK EFEKTİ DÜZELTMESİ ======= */
+/* ÖNEMLİ: Işığı resme değil, resmi kapsayan kutuya (.footer-logo) veriyoruz.
+*/
+.footer-logo {
+    display: inline-block;
+    margin-bottom: var(--spacing-md);
+    position: relative; /* Işığın bu kutuya göre hizalanması için gerekli */
+    z-index: 5; /* Işığın diğer elementlerin altında kalmaması ama resmin altında kalması için */
+}
+
+/* ::before elementini .footer-logo-img yerine .footer-logo'ya taşıdık */
+.footer-logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Işık Boyutu */
+    width: 190px; /* Logodan biraz daha geniş */
+    height: 190px;
+
+    /* Işık Rengi */
+    background: radial-gradient(circle, rgba(244, 178, 35, 0.4) 0%, rgba(244, 178, 35, 0) 70%);
+
+    filter: blur(20px);
+    z-index: -1; /* Resmin arkasına at */
+    border-radius: 50%;
+
+    /* Animasyon (İsterseniz yorumu kaldırın) */
+   /* animation: glowPulse 3s infinite ease-in-out;*/
+}
+
+/* Logoyu üstte tutmak için */
+.footer-logo-img {
+    position: relative;
+    z-index: 2; /* Işığın önünde durmalı */
+    max-width: 100%;
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+/* ======= GENEL IŞIK EFEKTİ (GLOW) AYARLARI ======= */
+.glow-effect {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    /* Rengi biraz daha görünür yaptım */
+    background: radial-gradient(circle, rgba(245, 176, 5, 0.15) 0%, rgba(245, 176, 5, 0) 70%);
+    filter: blur(80px);
+    z-index: 1; /* Konteynerin (z-index:2) altında kalmalı */
+    pointer-events: none; /* Tıklamaları engellememesi için */
+}
+
+/* Animasyon Tanımı */
+@keyframes glowPulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.7; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+}
+.footer-description {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--spacing-lg);
+    max-width: 300px;
+    line-height: 1.6;
+}
+
+/* ======= BAŞLIKLAR ======= */
+.footer-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--white);
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Tam merkeze hizala */
+
+    /* Işığın Boyutu: Logodan biraz daha büyük olmalı */
+    width: 115px;
+    height: 115px;
+
+    /* Işığın Rengi ve Dağılımı (Radial Gradient) */
+    /* Ortada sarımsı (%40 opaklık), dışa doğru şeffaflaşan bir ışık */
+    background: radial-gradient(circle, rgba(233, 196, 106, 0.6) 0%, rgba(233, 196, 106, 0) 70%);
+
+    /* Işığı yumuşatmak için Blur efekti */
+    filter: blur(15px);
+
+    /* Logonun arkasında kalması için */
+    z-index: 1;
+
+    /* Yanıp sönme animasyonu */
+    /*animation: glowPulse 3s infinite ease-in-out;*/
+    border-radius: 50%; /* Işık yuvarlak olsun */
+}
+
+.footer-heading:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-main);
+}
+
+/* ======= LİNKLER ======= */
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: 12px; }
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all var(--transition-fast, 0.3s); /* Fallback eklendi */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary-light);
+    transform: translateX(5px);
+}
+
+/* ======= İLETİŞİM ======= */
+.footer-contact p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-contact i { color: var(--primary-main); margin-top: 3px; }
+
+/* ======= SOSYAL MEDYA ======= */
+.social-links { display: flex; gap: 15px; margin-top: 20px; }
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--white) !important;
+    border-radius: 50%;
+    transition: all var(--transition-normal, 0.3s);
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    background: var(--primary-main);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ======= COPYRIGHT ======= */
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+/* ======= SARI IŞIK EFEKTİ (GLOW) ======= */
+.glow-effect {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 215, 0, 0) 70%);
+    filter: blur(60px);
+    z-index: 1; /* İçeriğin altında */
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.glow-top-left {
+    top: -300px;
+    left: -300px;
+    animation: pulseGlow 8s ease-in-out infinite;
+}
+
+.glow-bottom-right {
+    bottom: -300px;
+    right: -300px;
+    animation: pulseGlow 10s ease-in-out infinite 1s;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+/* ======= RESPONSIVE (MOBİL UYUMLULUK) ======= */
+
+/* Tablet ve Küçük Masaüstü (992px altı) */
+@media (max-width: 992px) {
+    .footer-heading {
+        margin-top: 30px; /* Üst üste binmeyi önlemek için boşluk */
+    }
+
+    .footer-logo-img {
+        width: 160px; /* Logo biraz küçülür */
+    }
+}
+
+/* Mobil Cihazlar (768px altı) */
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 40px 0 20px; /* Paddingleri azalt */
+        text-align: left; /* Mobilde genelde sola dayalı daha okunaklıdır */
+    }
+
+    .footer-logo-img {
+        width: 140px; /* Logo daha da küçülür */
+        margin-bottom: 15px;
+    }
+
+    .footer-heading {
+        margin-top: 25px; /* Başlıklar arası mesafe */
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+
+    .footer-description {
+        max-width: 100%; /* Tam genişlik kullan */
+        font-size: 0.95rem;
+    }
+
+    /* Işık efektini mobilde küçültüyoruz ki ekranı kaplamasın */
+    .glow-effect {
+        width: 300px;
+        height: 300px;
+        filter: blur(40px);
+    }
+
+    .glow-top-left {
+        top: -150px;
+        left: -150px;
+    }
+
+    .glow-bottom-right {
+        bottom: -150px;
+        right: -150px;
+    }
+
+    .copyright {
+        margin-top: 30px;
+        font-size: 0.8rem;
+    }
+}

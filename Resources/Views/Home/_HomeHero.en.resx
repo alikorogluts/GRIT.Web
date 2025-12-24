@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+    <data name="Bilim ve teknoloji ile" xml:space="preserve">
+    <value>We are redefining</value>
+  </data>
+
+    <data name="doğal afet risklerini" xml:space="preserve">
+    <value>natural hazard risks</value>
+  </data>
+
+    <data name="yeniden tanımlıyoruz" xml:space="preserve">
+    <value>with science and technology</value>
+  </data>
+
+    <data name="Sigorta ve reasürans sektörü için yüksek çözünürlüklü afet duyarlılık haritaları ve WebCBS tabanlı risk analiz platformları geliştiriyoruz." xml:space="preserve">
+    <value>We develop high-resolution disaster susceptibility maps and WebGIS-based risk analysis platforms for the insurance and reinsurance sectors.</value>
+  </data>
+
+    <data name="Daha Fazla Bilgi" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+
+    <data name="İletişim" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+
+</root>

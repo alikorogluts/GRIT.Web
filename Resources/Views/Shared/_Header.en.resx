@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+    <data name="Ana Sayfa" xml:space="preserve">
+    <value>Home</value>
+  </data>
+
+    <data name="Kurumsal" xml:space="preserve">
+    <value>Corporate</value>
+  </data>
+
+    <data name="Ürünlerimiz" xml:space="preserve">
+    <value>Products</value>
+  </data>
+
+    <data name="İletişim" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+
+</root>

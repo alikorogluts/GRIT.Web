@@ -1,0 +1,67 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<section class="team-section section-padding" style="background-color: var(--bg-primary);">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title center" data-aos="fade-up">@Localizer["Kurucu Ortaklar"]</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    @Localizer["Akademik yetkinlik ve sektörel tecrübeyi birleştiren lider kadromuz"]
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-card">
+                    <div class="img-wrapper">
+                        <img src="~/image/halil_2.jpg" alt="Prof. Dr. Halil AKINCI" class="img-fluid" onerror="this.src='https://via.placeholder.com/150?text=Foto'">
+                    </div>
+                    <div class="team-content">
+                        <h4 class="name">Prof. Dr. Halil AKINCI</h4>
+                        <span class="role">@Localizer["Kurucu Ortak"]</span>
+                        <div class="divider-small"></div>
+                        <p class="expertise">
+                            @Localizer["Coğrafi Bilgi Sistemleri, WebCBS, Makine Öğrenmesi, Heyelan, Taşkın ve Yangın Modelleme"]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-card">
+                    <div class="img-wrapper">
+                        <img src="~/image/sedat.jpg" alt="Prof. Dr. Sedat DOĞAN" class="img-fluid" onerror="this.src='https://via.placeholder.com/150?text=Foto'">
+                    </div>
+                    <div class="team-content">
+                        <h4 class="name">Prof. Dr. Sedat DOĞAN</h4>
+                        <span class="role">@Localizer["Kurucu Ortak"]</span>
+                        <div class="divider-small"></div>
+                        <p class="expertise">
+                            @Localizer["Fotogrametri, Uzaktan Algılama, Görüntü İşleme, WebCBS, Stokastik Taşkın Kataloğu Geliştirme"]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="team-card">
+                    <div class="img-wrapper">
+                        <img src="~/image/cem.jpg" alt="Doç. Dr. Cem KILIÇOĞLU" class="img-fluid" onerror="this.src='https://via.placeholder.com/150?text=Foto'">
+                    </div>
+                    <div class="team-content">
+                        <h4 class="name">Doç. Dr. Cem KILIÇOĞLU</h4>
+                        <span class="role">@Localizer["Kurucu Ortak"]</span>
+                        <div class="divider-small"></div>
+                        <p class="expertise">
+                            @Localizer["Jeoloji / Jeoteknik, Deprem Mühendisliği, Heyelan & Deprem Modelleme"]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

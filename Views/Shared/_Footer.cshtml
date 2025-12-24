@@ -1,0 +1,102 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<footer id="contact" class="footer-section">
+    <div class="glow-effect glow-top-left"></div>
+    <div class="glow-effect glow-bottom-right"></div>
+
+    <div class="container position-relative z-2">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-5 mb-lg-0">
+                <a class="footer-logo" asp-controller="Home" asp-action="Index">
+                    <img src="~/image/ingritwebzeminsiz.png" alt="inGRIT Logo" class="img-fluid footer-logo-img">
+                </a>
+                <p class="footer-description">
+                    @Localizer["Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. Tic. Ltd. Şti."]
+                </p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/grit-co%C4%9Frafi-risk-ve-bilgi-teknoloji-hizmetleri-7aa36a398/" class="social-btn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/55_ingrit_55/" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-6 mb-5 mb-md-0">
+                <h4 class="footer-heading">@Localizer["Hızlı Bağlantılar"]</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-chevron-right"></i> @Localizer["Ana Sayfa"]
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Index" asp-fragment="news">
+                            <i class="fas fa-chevron-right"></i> @Localizer["Bizden Haberler"]
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Products" asp-action="Index">
+                            <i class="fas fa-chevron-right"></i> @Localizer["Ürünlerimiz"]
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Corporate" asp-action="Index">
+                            <i class="fas fa-chevron-right"></i> @Localizer["Kurumsal"]
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Contact" asp-action="Index">
+                            <i class="fas fa-chevron-right"></i> @Localizer["İletişim"]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 mb-md-0">
+                <h4 class="footer-heading">@Localizer["Hizmetlerimiz"]</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a asp-controller="Products" asp-action="Index" asp-fragment="webrisk">
+                            <i class="fas fa-chevron-right"></i> @Localizer["Yazılım Çözümleri"]
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-controller="Products" asp-action="Index" asp-fragment="risk-map-data-model">
+                            <i class="fas fa-chevron-right"></i> @Localizer["Duyarlılık Haritaları"]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <h4 class="footer-heading">@Localizer["İletişim"]</h4>
+                <div class="footer-contact">
+                    <a href="https://maps.app.goo.gl/zxBT9uP73SRypFCW8" target="_blank"><p><i class="fas fa-map-marker-alt"></i> @Localizer["OMÜ Teknopark, Samsun, Türkiye"]</p></a>
+                    <a href="mailto:info@grit.com.tr"><p><i class="fas fa-envelope"></i> info@grit.com.tr</p></a>
+                    <p>
+                        <a href="tel:+903625020061" style="color:inherit; text-decoration:none;">
+                            <i class="fas fa-phone"></i> +90 (362) 502 00 61
+                        </a>
+                    </p>
+                    <p><i class="fas fa-fax"></i> +90 (362) 457 56 46</p>
+                    <p><i class="fas fa-clock"></i> @Localizer["Pzt-Cum: 09:00-18:00"]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="copyright">
+                    <p>
+                        &copy; 2025 @Localizer["GRİT Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti. Tüm hakları saklıdır."]
+                    </p>
+                    <br/>
+                    <a href="https://tr.linkedin.com/in/alikorogluts" target="_blank"><p style="color: rgb(10,10,10)">Created by Ali Köroğlu</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/components/_footer.css">
+}

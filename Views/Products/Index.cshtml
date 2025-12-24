@@ -1,0 +1,244 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@using System.Globalization
+
+@{
+    // Basit Kontrol: Dil İngilizce mi?
+    var isEnglish = CultureInfo.CurrentUICulture.Name.StartsWith("en");
+
+    // Tek satırda çeviri: İngilizce ise "Corporate", değilse "Kurumsal"
+    ViewData["Title"] = isEnglish ? "Products" : "Ürünlerimiz";
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/page/products/products.css"/>
+}
+
+<section id="products" class="products-section section-padding mt-5" style="background: var(--bg-primary)">
+    <div class="bg-pattern-dots"></div>
+    <div class="container position-relative z-2 mt-4">
+       
+        <div class="row mb-4">
+            <div class="col-12 text-center mt-4">
+                <h2 class="section-title center" data-aos="fade-up">@Localizer["Ürünlerimiz"]</h2>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <p class="lead text-center about-paragraph" data-aos="fade-up">
+                    @Localizer["Sigorta ve reasürans süreçleri için konumsal veriye dayalı, bilimsel ve teknolojik çözümler sunuyoruz."]
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+
+        <div id="software-solution" class="row mb-4" data-aos="fade-up">
+            <div class="col-12">
+                <h3 class="product-category-header">@Localizer["Yazılım Çözümleri"]</h3>
+            </div>
+        </div>
+
+       <div class="products-list mb-5">
+    
+            <article id="webrisk" class="product-card-new" data-aos="fade-left">
+                <div class="thumb software-thumb map-thumb square-image-box">
+                    <img src="~/image/last-image/inGritWebRiskReports.jpeg" alt="inGritWebRiskReports">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["Sigorta • Risk Analizi & Raporlama"]</div>
+                    <h3 class="title">inGritWebRiskReports</h3>
+                    <p class="description">@Localizer["Konum / adres bazlı risk sorgulama, poliçe öncesi değerlendirme ve lokasyon risk skorlarını kullanıcı dostu bir arayüzde sunan web tabanlı risk analiz yazılımıdır."]</p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["Koordinat/adres bazlı anlık risk skoru"]</div>
+                        <div class="feature">@Localizer["Poliçe kabulü & fiyatlama desteği"]</div>
+                        <div class="feature">@Localizer["RESTFull Mimari & API entegrasyonu"]</div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="reazy" class="product-card-new" data-aos="fade-right">
+                <div class="thumb software-thumb map-thumb square-image-box">
+                    <img src="~/image/last-image/reazyco.jpeg" alt="Reazy.co">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["Sigorta • Risk Sorgulama • Abonelik Modeli"]</div>
+                    <h3 class="title">@Localizer["Reazy.co Servisi"]</h3>
+                    <p class="description">@Localizer["Adres veya koordinat bazlı risk sorgulamasına olanak sağlayan WebCBS platformudur. Esnek bir yapıya sahiptir, meteorolojik risk uyarıları ve acente bilgilendirme servisleri eklenebilir."]</p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["Sorgu Başına Ödeme (Pay As You Go)"]</div>
+                        <div class="feature">@Localizer["Esnek ve genişletilebilir mimari"]</div>
+                        <div class="feature">@Localizer["7/24 Meteorolojik risk uyarıları"]</div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="smartvision" class="product-card-new" data-aos="fade-left">
+                <div class="thumb software-thumb map-thumb square-image-box">
+                    <img src="~/image/last-image/SmartVision.jpeg" alt="SmartVision">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["İSG • Gerçek Zamanlı İzleme • Yapay Zeka"]</div>
+                    <h3 class="title">inGrit SmartVision Technologies</h3>
+                    <p class="description">@Localizer["Yapay zeka destekli video analizi ile çalışan güvenliği ihlallerini tespit eden, anlık bildirim sistemleri ve raporlama panelleri sunan modern bir İSG takip, analiz ve raporlama platformudur."]</p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["Mevcut kameralarla gerçek zamanlı analiz"]</div>
+                        <div class="feature">@Localizer["Kişisel koruyucu donanım tespiti"]</div>
+                        <div class="feature">@Localizer["Otomatik ihlal alarmı & bildirim paneli"]</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+
+        <div id="risk-map-data-model" class="row mb-4 mt-5" data-aos="fade-up">
+            <div class="col-12">
+                <h3 class="product-category-header">@Localizer["Duyarlılık Haritaları"]</h3>
+            </div>
+        </div>
+
+        <div class="products-list">
+
+            <article id="heyelan" class="product-card-new" data-aos="fade-right">
+                <div class="thumb map-thumb">
+                    <img src="~/image/last-image/heyelan_2.jpg" alt="@Localizer["Heyelan Haritası"]" onerror="this.style.display='none'">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["HEYELAN • MAKİNE ÖĞRENMESİ • 14 PARAMETRE"]</div>
+                    <h3 class="title">@Localizer["Heyelan Duyarlılık Haritaları"]</h3>
+                    <p class="description">
+                        @Localizer["10 m çözünürlükte, 14 farklı nedensel faktör ile makine öğrenmesi tabanlı duyarlılık modelleri kullanılarak üretilen haritalardır. Envanter verisi ile doğrulama sağlanır."]
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["Makine öğrenmesi tabanlı üretim"]</div>
+                        <div class="feature">@Localizer["Geriye dönük doğrulama"]</div>
+                        <div class="feature">@Localizer["Poliçe bazlı değerlendirme"]</div>
+                    </div>
+
+                    <div class="product-details-box">
+                        <div class="detail-row">
+                            <strong>@Localizer["Kullanım Alanları:"]</strong> @Localizer["Underwriting incelemeleri, fiyatlama, saha ekipleri yönlendirme, reasürans portföy analizi."]
+                        </div>
+                        <div class="detail-row">
+                            <strong>@Localizer["Çıktılar:"]</strong> @Localizer["10 m raster harita, bina/kritik tesis seviyesinde risk skoru."]
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="sel" class="product-card-new" data-aos="fade-left">
+                <div class="thumb map-thumb">
+                    <img src="~/image/last-image/taskin_2.jpg" alt="@Localizer["Sel Haritası"]" onerror="this.style.display='none'">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["HEC-RAS • MIKE FLOOD • MAKİNE ÖĞRENMESİ"]</div>
+                    <h3 class="title">@Localizer["Sel / Taşkın Duyarlılık Haritaları"]</h3>
+                    <p class="description">
+                        @Localizer["Şehir içi ve akarsu tabanlı taşkın risklerini kapsayan; HEC-RAS ve Makine Öğrenmesi (ML) algoritmaları kullanılarak üretilen hibrit model çözümüdür."]
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["Hibrit Model: HEC-RAS + ML"]</div>
+                        <div class="feature">@Localizer["14 farklı nedensel faktör"]</div>
+                        <div class="feature">@Localizer["Şehir içi taşkın tespiti"]</div>
+                    </div>
+
+                    <div class="product-details-box">
+                        <div class="detail-row">
+                            <strong>@Localizer["Kullanım Alanları:"]</strong> @Localizer["Hasar öncesi önlem, risk değerlendirme, fiyatlama, acil müdahale planlama."]
+                        </div>
+                        <div class="detail-row">
+                            <strong>@Localizer["Veriler:"]</strong> @Localizer["Hidrolojik, meteorolojik ve topografik veriler & uydu verileri."]
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="derinlik" class="product-card-new" data-aos="fade-right">
+                <div class="thumb map-thumb">
+                    <img src="~/image/last-image/taskin_derinlik_2.jpg" alt="@Localizer["Derinlik Haritası"]" onerror="this.style.display='none'">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["SENARYO ANALİZİ • SU DERİNLİĞİ • AĞAÇ TABANLI MODEL"]</div>
+                    <h3 class="title">@Localizer["Taşkın Derinlik Haritaları"]</h3>
+                    <p class="description">
+                        @Localizer["72 saatlik ortalama ve maksimum yağış senaryoları için derinlik haritalarını üreten modeller. Ağaç tabanlı topluluk öğrenme algoritmaları kullanılır."]
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["72 saatlik ort/maks yağış senaryoları"]</div>
+                        <div class="feature">@Localizer["Hassas taşkın su derinliği (cm)"]</div>
+                        <div class="feature">@Localizer["Hasar rezervi hesaplama desteği"]</div>
+                    </div>
+
+                    <div class="product-details-box">
+                        <div class="detail-row">
+                            <strong>@Localizer["Kullanım Alanları:"]</strong> @Localizer["Hasar rezervi hesaplama, hızlı tazminat ön değerlendirmesi, saha önceliklendirme."]
+                        </div>
+                        <div class="detail-row">
+                            <strong>@Localizer["Model Validasyonu:"]</strong> @Localizer["Geriye dönük ölçümler ve uydu/saha verileriyle çapraz doğrulama."]
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="yangin" class="product-card-new" data-aos="fade-left">
+                <div class="thumb map-thumb">
+                    <img src="~/image/last-image/yangin_2.jpg" alt="@Localizer["Yangın Haritası"]" onerror="this.style.display='none'">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["RİSKLİ 24 İL • 16 PARAMETRE • MAKİNE ÖĞRENMESİ"]</div>
+                    <h3 class="title">@Localizer["Orman Yangını Duyarlılık Haritaları"]</h3>
+                    <p class="description">
+                        @Localizer["Yüksek riskli 24 il için; rüzgar, sıcaklık, nem, yakıt türü gibi 16 parametre ve 10 farklı ML algoritması ile üretilen duyarlılık haritalarıdır."]
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["Kapsam: Yangın riski yüksek 24 il için üretim"]</div>
+                        <div class="feature">@Localizer["İl sınırı ölçeğinde geniş kapsam"]</div>
+                        <div class="feature">@Localizer["UW ve reasürans risk değerlendirmesi için uygun"]</div>
+                    </div>
+
+                    <div class="product-details-box">
+                        <div class="detail-row">
+                            <strong>@Localizer["Kullanım Alanları:"]</strong> @Localizer["UW süreçleri, erken uyarı, tahliye planlaması, tesis koruma."]
+                        </div>
+                        <div class="detail-row">
+                            <strong>@Localizer["Doğrulama:"]</strong> @Localizer["Gerçek yangın olaylarıyla geriye dönük doğrulama testleri."]
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="deprem" class="product-card-new" data-aos="fade-right">
+                <div class="thumb map-thumb">
+                    <img src="~/image/last-image/deprem_2.jpg" alt="@Localizer["Deprem Haritası"]" onerror="this.style.display='none'">
+                </div>
+                <div class="product-content">
+                    <div class="tag">@Localizer["FAY • ZEMİN • ÇOK KRİTERLİ KARAR ANALİZİ"]</div>
+                    <h3 class="title">@Localizer["Deprem Duyarlılık Haritaları"]</h3>
+                    <p class="description">
+                        @Localizer["Zemin dinamiği, fay yoğunluğu ve yerel zemin amplifikasyonu gibi faktörleri birleştirerek depreme duyarlı bölgeleri ve yapıların hasar potansiyelini belirler."]
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature">@Localizer["AHP Tabanlı Çok Kriterli Karar Analizi"]</div>
+                        <div class="feature">@Localizer["Deprem duyarlılık bölgeleri"]</div>
+                        <div class="feature">@Localizer["Poliçe seviyesinde risk çıktısı"]</div>
+                    </div>
+
+                    <div class="product-details-box">
+                        <div class="detail-row">
+                            <strong>@Localizer["Kullanım Alanları:"]</strong> @Localizer["Deprem risk fiyatlaması, zemin temelli prim ayrıştırma, altyapı güvenlik çalışmaları."]
+                        </div>
+                        <div class="detail-row">
+                            <strong>@Localizer["Çıktılar:"]</strong> @Localizer["Deprem duyarlılık haritaları."]
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,71 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<section id="statistics" class="statistics-section section-padding">
+    <div class="stats-bg-overlay"></div>
+
+    <div class="container position-relative z-2">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-heading mb-3">@Localizer["Rakamlarla GRİT"]</h2>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                <div class="glass-stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-count="81">0</div>
+                        <div class="stat-label">@Localizer["İl"]</div>
+                    </div>
+                    <div class="stat-desc">@Localizer["Çalıştığımız il sayısı"]</div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="glass-stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-count="275">0</div>
+                        <div class="stat-label">@Localizer["İlçe"]</div>
+                    </div>
+                    <div class="stat-desc">@Localizer["Çalıştığımız ilçe sayısı"]</div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-count="90">0</div>
+                        <span class="stat-symbol">%</span>
+                        <div class="stat-label">@Localizer["Doğruluk Oranı"]</div>
+                    </div>
+                    <div class="stat-desc">@Localizer["Bilimsel verilerle kanıtlanmış başarı"]</div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass-stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number" data-count="100">0</div>
+                        <span class="stat-symbol">%</span>
+                        <div class="stat-label">@Localizer["Kapsama"]</div>
+                    </div>
+                    <div class="stat-desc">@Localizer["Tüm poliçeler için risk skoru"]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

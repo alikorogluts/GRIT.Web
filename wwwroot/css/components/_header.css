@@ -1,0 +1,279 @@
+/* ======= HEADER STYLES ======= */
+
+/* 1. Header Konteyner (GENEL / MASAÜSTÜ AYARI) */
+.header {
+    /* MASAÜSTÜ BAŞLANGIÇ: Sayfa en tepedeyken yerinde dursun */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+
+    /* Görünüm */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    padding: 20px 0;
+}
+
+/* MASAÜSTÜ: JS ile eklenen .scrolled sınıfı (Aşağı kaydırınca SABİTLENSİN) */
+.header.scrolled {
+    position: fixed; /* BURASI EKLENDİ: Masaüstünde aşağı kayınca yapışsın */
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    /* Ufak bir animasyonla yukarıdan gelsin */
+    animation: slideDown 0.35s ease-out forwards;
+}
+
+/* Masaüstü header gelme animasyonu */
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Light Mod için Header Arka Planı */
+[data-theme="light"] .header.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* --- MEVCUT KODLARINIZ --- */
+.navbar-brand {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Işığı ve logoyu tam ortalamak için */
+}
+
+.navbar-logo-img {
+    height: 110px;
+    width: auto;
+    position: relative;
+    z-index: 2; /* Resim ışığın önünde dursun */
+}
+
+/* --- YENİ EKLENECEK IŞIK EFEKTİ --- */
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Tam merkeze hizala */
+
+    /* Işığın Boyutu: Logodan biraz daha büyük olmalı */
+    width: 135px;
+    height: 135px;
+
+    /* Işığın Rengi ve Dağılımı (Radial Gradient) */
+    /* Ortada sarımsı (%40 opaklık), dışa doğru şeffaflaşan bir ışık */
+    background: radial-gradient(circle, rgba(233, 196, 106, 0.6) 0%, rgba(233, 196, 106, 0) 70%);
+
+    /* Işığı yumuşatmak için Blur efekti */
+    filter: blur(15px);
+
+    /* Logonun arkasında kalması için */
+    z-index: 1;
+
+    /* Yanıp sönme animasyonu */
+    /*animation: glowPulse 3s infinite ease-in-out;*/
+    border-radius: 50%; /* Işık yuvarlak olsun */
+}
+
+/* Animasyon Tanımı */
+@keyframes glowPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2); /* Işık büyür */
+        opacity: 0.8; /* Işık parlar */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+/* 3. Menü Linkleri */
+.navbar-nav .nav-item { margin: 0 10px; position: relative; }
+.navbar-nav .nav-link {
+    color: #666 !important; font-weight: 500; font-size: 1.20rem;
+    padding: 10px 0; position: relative; opacity: 0.8; transition: opacity 0.3s;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { opacity: 1; color: var(--primary-main) !important; }
+
+/* Alt Çizgi Animasyonu */
+.navbar-nav .nav-link::after {
+    content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+    background: linear-gradient(90deg, var(--primary-main), var(--accent-color));
+    transition: width 0.3s ease;
+}
+.navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.active::after { width: 100%; }
+
+/* 4. Dropdown Menü */
+.custom-dropdown {
+    background-color: var(--card-bg); border: 1px solid var(--border-color);
+    border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); padding: 15px;
+    top: 120%; opacity: 0; visibility: hidden; transform: translateY(10px);
+    transition: all 0.3s ease; display: block;
+}
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .custom-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+}
+.dropdown-item { color: var(--text-secondary); border-radius: 8px; padding: 8px 15px; font-size: 0.9rem; transition: all 0.2s; }
+.dropdown-item:hover { background-color: rgba(26, 126, 99, 0.1); color: var(--primary-main); transform: translateX(5px); }
+.dropdown-divider { border-top-color: var(--border-color); }
+
+/* 5. Sağ Taraf Butonları */
+.lang-link { font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; transition: color 0.3s; }
+.lang-link:hover, .lang-link.active { color: var(--primary-main); }
+.lang-switch .divider { margin: 0 5px; color: var(--border-color); }
+
+.theme-btn {
+    background: var(--bg-secondary); border: 1px solid var(--border-color);
+    width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; color: var(--text-primary); transition: all 0.3s ease;
+}
+.theme-btn:hover { background: var(--primary-main); border-color: var(--primary-main); color: #fff; transform: rotate(30deg); }
+[data-theme="dark"] .theme-icon-light { display: none; }
+[data-theme="light"] .theme-icon-dark { display: none; }
+/* 6. Hamburger Menü */
+.custom-toggler {
+    border: none;
+    padding: 0;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hamburger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+/* ORTA ÇİZGİ */
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #666 !important; /* Rengi #666 yaptık ve !important ekledik */
+    border-radius: 4px;
+    position: absolute;
+    transition: transform .15s ease;
+}
+
+/* ÜST VE ALT ÇİZGİLER */
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #666 !important; /* Buraya da aynısını uyguladık */
+    border-radius: 4px;
+    position: absolute;
+    transition: transform .15s ease;
+}
+
+.hamburger-inner::before { top: -8px; }
+.hamburger-inner::after { bottom: -8px; }
+
+/* Menü açıldığında (X) şeklini alması */
+.custom-toggler[aria-expanded="true"] .hamburger-inner { transform: rotate(45deg); }
+.custom-toggler[aria-expanded="true"] .hamburger-inner::before { top: 0; opacity: 0; }
+.custom-toggler[aria-expanded="true"] .hamburger-inner::after { bottom: 0; transform: rotate(-90deg); }
+/* ======= 7. RESPONSIVE (MOBİL AYARLARI) ======= */
+@media (max-width: 991px) {
+    .navbar-logo-img {
+        height: 70px; /* Mobilde logo küçülsün */
+        transition: height 0.3s ease; /* Yumuşak geçiş */
+    }
+
+    /* --- MOBİL IŞIK EFEKTİ AYARI --- */
+    /* Logo küçülünce arkasındaki ışığı da küçültüyoruz */
+    .navbar-brand::before {
+        width: 85px;  /* Logodan biraz büyük (50px logo + pay) */
+        height: 85px;
+        filter: blur(10px); /* Mobilde blur'u biraz azaltabiliriz */
+    }
+    /* --- MOBİL HEADER --- */
+    .header {
+        position: absolute !important; /* DEĞİŞİKLİK: Fixed yerine Absolute yapıldı */
+        /* Böylece aşağı kaydırıldığında header yukarıda kalıp ekrandan çıkacak */
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: transparent !important;
+        box-shadow: none;
+        border-bottom: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 15px 0;
+    }
+
+    /* Scroll edilse bile mobilde fixed OLMASIN, absolute kalsın */
+    .header.scrolled {
+        position: absolute !important;
+        animation: none; /* Mobilde animasyonu iptal et */
+
+        /* Eğer scroll edince arka plan koyulaşsın ama yukarıda kalsın istiyorsan burayı tutabilirsin.
+           Ama tamamen görünmez olsun diyorsan aşağı kayınca zaten yukarıda kalacağı için sorun yok. */
+        background: rgba(10, 10, 10, 0.9) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+        padding: 10px 0;
+    }
+
+    /* Light Mod Scroll */
+    [data-theme="light"] .header.scrolled {
+        background: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    /* --- MOBİL MENÜ KUTUSU (NAVBAR COLLAPSE) --- */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #0a0a0a;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Light Mod Menü Kutusu */
+    [data-theme="light"] .navbar-collapse {
+        background: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --- DİĞER MOBİL AYARLAR --- */
+    .navbar-nav { margin-bottom: 20px; }
+    .header-actions { justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 20px; }
+    .custom-dropdown { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: var(--bg-secondary); margin-top: 10px; display: none; }
+    .dropdown-menu.show { display: block; }
+}
+
+/* ======= LANGUAGE SWITCHER STYLES ======= */
+.lang-switch { display: flex; align-items: center; font-family: 'Poppins', sans-serif; }
+.lang-btn { background: none; border: none; padding: 0; cursor: pointer; font-size: 1.20rem; font-weight: 600; color: var(--text-secondary); transition: all 0.3s ease; position: relative; }
+.lang-btn:hover { color: var(--primary-main); }
+.lang-btn.active { color: var(--primary-main); font-weight: 800; text-shadow: 0 0 10px rgba(26, 126, 99, 0.3); }
+.lang-switch .divider { color: var(--border-color); font-size: 0.8rem; opacity: 0.5; }
+[data-theme="light"] .lang-btn { color: #666; }
+[data-theme="light"] .lang-btn.active { color: var(--primary-main); }

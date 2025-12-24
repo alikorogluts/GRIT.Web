@@ -1,0 +1,117 @@
+
+/* ======= REFERENCES SECTION STYLES ======= */
+.references-section {
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.references-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(26, 126, 99, 0.08) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 60px 40px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.ref-item {
+    position: relative;
+    padding: 10px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/* Genel Logo Stili */
+.ref-logo {
+    max-height: 55px; /* Standart yükseklik */
+    max-width: 180px;
+    filter: grayscale(100%) brightness(200%) opacity(0.7); /* Dark modda soluk gri */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+/* --- AKSİGORTA ÖZEL STİLİ --- */
+.aksigorta-style {
+    background-color: #ED1C24; /* Aksigorta Kırmızısı */
+    padding: 12px 25px;       /* Logonun etrafında boşluk */
+    border-radius: 50px;      /* Oval/Yuvarlak kenarlar (Daha modern) */
+    /* Köşeli isterseniz: border-radius: 12px; yapabilirsiniz */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    max-height: 65px !important; /* Arka plan olduğu için biraz daha yüksek olabilir */
+    width: auto;
+    /* Dark modda arka plan da grileşsin diye filter'ı koruyoruz */
+}
+
+/* --- HOVER EFEKTLERİ --- */
+.ref-item:hover .ref-logo {
+    filter: grayscale(0%) opacity(1) brightness(100%); /* Renklen */
+    transform: scale(1.1);
+}
+
+/* Aksigorta Hover'da Parlama */
+.ref-item:hover .aksigorta-style {
+    box-shadow: 0 8px 25px rgba(237, 28, 36, 0.4); /* Kırmızı parlama */
+}
+
+/* Glow Efekti (Arkadaki ışık) */
+.ref-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.ref-item:hover .ref-glow {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* --- LIGHT THEME AYARLARI --- */
+[data-theme="light"] .glass-container {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .ref-logo {
+    filter: grayscale(0%) opacity(1); /* Light modda direkt renkli başla */
+}
+
+/* Light modda Aksigorta her zaman kırmızı kalsın */
+[data-theme="light"] .aksigorta-style {
+    filter: none;
+    box-shadow: 0 5px 15px rgba(237, 28, 36, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glass-container { padding: 30px 15px; }
+    .ref-logo { max-height: 40px; }
+    .aksigorta-style { max-height: 50px !important; padding: 10px 20px; }
+}
+

@@ -1,0 +1,79 @@
+
+.about-preview-section {
+    margin-top: 50px;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-pattern-dots {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: radial-gradient(var(--text-tertiary) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* MISYON – VIZYON KUTULARI */
+/* Kutular eşit yükseklikte olsun */
+.feature-item {
+    display: flex;
+    flex-direction: row;
+    height: 100%;            /* En önemli kısım */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    background: var(--bg-tertiary);
+    border-color: var(--primary-main);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 12px;
+}
+
+.feature-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.feature-content p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.625;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+    .feature-item {
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+.about-paragraph {
+    color: var(--text-secondary);
+    line-height: 1.625;
+    font-weight: 400; /* biraz daha tok görünüm için */
+}
+

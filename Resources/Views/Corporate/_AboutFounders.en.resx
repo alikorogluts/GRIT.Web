@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+    <data name="Kurucu Ortaklar" xml:space="preserve">
+    <value>Founding Partners</value>
+  </data>
+  
+    <data name="Akademik yetkinlik ve sektörel tecrübeyi birleştiren lider kadromuz" xml:space="preserve">
+    <value>Our leadership team combining academic competence and sectoral experience</value>
+  </data>
+  
+    <data name="Kurucu Ortak" xml:space="preserve">
+    <value>Co-Founder</value>
+  </data>
+
+    <data name="Coğrafi Bilgi Sistemleri, WebCBS, Makine Öğrenmesi, Heyelan, Taşkın ve Yangın Modelleme" xml:space="preserve">
+    <value>Geographic Information Systems (GIS), WebGIS, Machine Learning, Landslide, Flood and Wildfire Modeling</value>
+  </data>
+
+    <data name="Fotogrametri, Uzaktan Algılama, Görüntü İşleme, WebCBS, Stokastik Taşkın Kataloğu Geliştirme" xml:space="preserve">
+    <value>Photogrammetry, Remote Sensing, Image Processing, WebGIS, Stochastic Flood Catalog Development</value>
+  </data>
+
+    <data name="Jeoloji / Jeoteknik, Deprem Mühendisliği, Heyelan &amp; Deprem Modelleme" xml:space="preserve">
+    <value>Geology / Geotechnics, Earthquake Engineering, Landslide &amp; Earthquake Modeling</value>
+  </data>
+
+</root>

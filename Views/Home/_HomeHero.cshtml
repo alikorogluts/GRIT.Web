@@ -1,0 +1,48 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Html 
+@inject IViewLocalizer Localizer
+
+<section id="hero" class="hero-section">
+    <div class="hero-background">
+        <div class="hero-pattern"></div>
+    </div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <div id ="hero-text" class="hero-text">
+                        <h1 class="hero-title fw-bold text-white mb-4 animate__animated animate__fadeInLeft">
+                            @Localizer["Bilim ve teknoloji ile"] <br>
+                            
+                            <span class="text-gradient-gold">@Localizer["doğal afet risklerini"]</span> <br>
+                            
+                            @Localizer["yeniden tanımlıyoruz"]
+                        </h1>
+                        
+                        <p class="hero-description">
+                            @Localizer["Sigorta ve reasürans sektörü için yüksek çözünürlüklü afet duyarlılık haritaları ve WebCBS tabanlı risk analiz platformları geliştiriyoruz."]
+                        </p>
+                        
+                        <div class="hero-actions d-flex flex-wrap gap-3 mt-5">
+                            <a asp-controller="Corporate" asp-action="Index" class="btn btn-primary">
+                                <i class="fas fa-info-circle me-2"></i>@Localizer["Daha Fazla Bilgi"]
+                            </a>
+                            <a asp-controller="Contact" asp-action="Index" class="btn btn-outline" style="color: white; border-color: white;">
+                                <i class="fas fa-envelope me-2"></i>@Localizer["İletişim"]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mb-lg-0 mb-5">
+                    <div class="hero-animation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="hero-scroll-indicator">
+        <div class="scroll-arrow"></div>
+    </div>
+</section>

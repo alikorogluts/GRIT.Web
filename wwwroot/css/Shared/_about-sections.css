@@ -1,0 +1,65 @@
+.about-sections {
+    position: relative;
+    height: 100vh; /* Sadece yatay kaydırma için geçerli */
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+.about-container {
+    display: flex;
+    width: 400%; /* 4 panel * %100 */
+    height: 100%;
+}
+
+.about-panel {
+    width: 25%;
+    height: 100%;
+    flex-shrink: 0; /* Bootstrap flexbox ile çakışmayı engeller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    scroll-snap-align: start; /* Mobil dikey kaydırma için snap özelliği */
+}
+
+.about-content {
+    max-width: 700px;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.about-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-main);
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.mission {
+    background: var(--bg-secondary);
+}
+
+.vision {
+    background: var(--bg-tertiary);
+}
+
+.about-panel-about {
+    background: var(--bg-secondary);
+}
+
+.values {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.values .about-title,
+.values .about-text,
+.values .value-item * {
+    color: var(--white) !important;
+}

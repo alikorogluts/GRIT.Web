@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  
+  <data name="İletişim" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  
+  <data name="Bizimle İletişime Geçin" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  
+  <data name="Proje ve işbirliği önerileriniz, detaylı sunu talepleriniz veya sorularınız için her zaman yanınızdayız." xml:space="preserve">
+    <value>We are always here for your project and collaboration proposals, detailed presentation requests, or questions.</value>
+  </data>
+
+  <data name="Adres" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="OMÜ Teknopark" xml:space="preserve">
+    <value>OMU Technopark</value>
+  </data>
+  <data name="Aksu Mahallesi, Yurt Sokak" xml:space="preserve">
+    <value>Aksu District, Yurt Street</value>
+  </data>
+  <data name="No: 165, Atakum / Samsun" xml:space="preserve">
+    <value>No: 165, Atakum / Samsun</value>
+  </data>
+  
+  <data name="Haritada Gör" xml:space="preserve">
+    <value>View on Map</value>
+  </data>
+
+  <data name="Telefon" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Faks:" xml:space="preserve">
+    <value>Fax:</value>
+  </data>
+  <data name="Hemen Ara" xml:space="preserve">
+    <value>Call Now</value>
+  </data>
+
+  <data name="E-posta" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Ortalama yanıt süresi: 24 Saat" xml:space="preserve">
+    <value>Average response time: 24 Hours</value>
+  </data>
+  <data name="Mail Gönder" xml:space="preserve">
+    <value>Send Email</value>
+  </data>
+
+  <data name="Bize Mesaj Gönderin" xml:space="preserve">
+    <value>Send Us a Message</value>
+  </data>
+  <data name="Formu doldurun, uzman ekibimiz sizinle iletişime geçsin." xml:space="preserve">
+    <value>Fill out the form and our expert team will contact you.</value>
+  </data>
+
+  <data name="Adınız Soyadınız" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="Örn: Ahmet Yılmaz" xml:space="preserve">
+    <value>Ex: John Doe</value>
+  </data>
+
+  <data name="E-posta Adresiniz" xml:space="preserve">
+    <value>Your Email Address</value>
+  </data>
+
+  <data name="Telefon Numaranız" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Lütfen geçerli bir telefon numarası girin. Örnek: 0555 555 55 55" xml:space="preserve">
+    <value>Please enter a valid phone number. Example: 0555 555 55 55</value>
+  </data>
+
+  <data name="Konu" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Seçiniz" xml:space="preserve">
+    <value>Select...</value>
+  </data>
+  <data name="Demo/Sunum Talep" xml:space="preserve">
+    <value>Demo/Presentation Request</value>
+  </data>
+  <data name="Satış &amp; Teklif" xml:space="preserve">
+    <value>Sales &amp; Proposal</value>
+  </data>
+  <data name="Teknik Destek" xml:space="preserve">
+    <value>Technical Support</value>
+  </data>
+  <data name="İş Birliği" xml:space="preserve">
+    <value>Collaboration</value>
+  </data>
+  <data name="Diğer" xml:space="preserve">
+    <value>Other</value>
+  </data>
+
+  <data name="Mesajınız" xml:space="preserve">
+    <value>Your Message</value>
+  </data>
+  <data name="Mesajınızı buraya yazın..." xml:space="preserve">
+    <value>Type your message here...</value>
+  </data>
+
+  <data name="Mesajı Gönder" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+
+  <data name="Sosyal Medya" xml:space="preserve">
+    <value>Social Media</value>
+  </data>
+
+  <data name="Başarılı!" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="Mesajınız başarıyla gönderildi." xml:space="preserve">
+    <value>Your message has been sent successfully.</value>
+  </data>
+  <data name="Hata!" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Bir hata oluştu. Lütfen tekrar deneyin." xml:space="preserve">
+    <value>An error occurred. Please try again.</value>
+  </data>
+  <data name="Lütfen tüm alanları doğru şekilde doldurun." xml:space="preserve">
+    <value>Please fill in all fields correctly.</value>
+  </data>
+  <data name="Harita Yükleniyor..." xml:space="preserve">
+    <value>Loading Map...</value>
+  </data>
+  
+  <data name="Gönderiliyor..." xml:space="preserve">
+    <value>Sending...</value>
+  </data>
+  
+  <data name="Sunucuya ulaşılamadı. İnternet bağlantınızı kontrol edin." xml:space="preserve">
+    <value>Server unreachable. Please check your internet connection.</value>
+  </data>
+  
+  <data name="Bir hata oluştu. Lütfen tekrar deneyin." xml:space="preserve">
+    <value>An error occurred. Please try again.</value>
+  </data>
+  
+  <data name="Başarılı!" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  
+  <data name="Hata!" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+
+</root>

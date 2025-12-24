@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. Tic. Ltd. Şti." xml:space="preserve">
+    <value>Geographic Risk and Information Technology Services Ltd.</value>
+  </data>
+    <data name="Hızlı Bağlantılar" xml:space="preserve">
+    <value>Quick Links</value>
+  </data>
+    <data name="Hizmetlerimiz" xml:space="preserve">
+    <value>Our Services</value>
+  </data>
+    <data name="İletişim" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+    <data name="Ana Sayfa" xml:space="preserve">
+    <value>Home</value>
+  </data>
+    <data name="Bizden Haberler" xml:space="preserve">
+    <value>News &amp; Updates</value>
+  </data>
+    <data name="Ürünlerimiz" xml:space="preserve">
+    <value>Products</value>
+  </data>
+    <data name="Kurumsal" xml:space="preserve">
+    <value>Corporate</value>
+  </data>
+    <data name="Yazılım Çözümleri" xml:space="preserve">
+    <value>Software Solutions</value>
+  </data>
+    <data name="Duyarlılık Haritaları" xml:space="preserve">
+    <value>Susceptibility Maps</value>
+  </data>
+    <data name="OMÜ Teknopark, Samsun, Türkiye" xml:space="preserve">
+    <value>OMU Technopark, Samsun, Turkey</value>
+  </data>
+    <data name="Pzt-Cum: 09:00-18:00" xml:space="preserve">
+    <value>Mon-Fri: 09:00-18:00</value>
+  </data>
+    <data name="GRİT Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti. Tüm hakları saklıdır." xml:space="preserve">
+    <value>GRIT Geographic Risk and Information Technology Services Ltd. All rights reserved.</value>
+  </data>
+</root>

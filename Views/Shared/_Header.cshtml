@@ -1,0 +1,95 @@
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@inject IViewLocalizer Localizer
+
+@{
+    // 1. Mevcut Dili Al (tr veya en)
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var currentCulture = requestCulture.RequestCulture.UICulture.Name;
+
+    // 2. Mevcut Rota Bilgilerini Al (Linklerin aktiflik durumu ve dil değişimi için)
+    var routeData = ViewContext.RouteData.Values;
+    var currentController = routeData["controller"]?.ToString();
+    var currentAction = routeData["action"]?.ToString();
+    var currentId = routeData["id"]; 
+}
+
+<header id="header" class="header fixed-top">
+   
+    <div class="container-fluid px-lg-5">
+        <nav class="navbar navbar-expand-lg">
+
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <img src="~/image/ingritwebzeminsiz.png" alt="inGRIT Logo" class="navbar-logo-img">
+            </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </div>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link @(currentAction == "Index" && currentController == "Home" ? "active" : "")"
+                           asp-controller="Home" asp-action="Index">
+                            @Localizer["Ana Sayfa"]
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link @(currentAction == "Index" && currentController=="Corporate" ? "active" : "")"
+                           asp-controller="Corporate" asp-action="Index">
+                            @Localizer["Kurumsal"]
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link @(currentAction == "Index" && currentController=="Products" ? "active" : "")"
+                           asp-controller="Products" asp-action="Index">
+                            @Localizer["Ürünlerimiz"]
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link @(currentAction == "Index" && currentController=="Contact" ? "active" : "")"
+                           asp-controller="Contact" asp-action="Index">
+                            @Localizer["İletişim"]
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="header-actions d-flex align-items-center">
+
+                    <div class="lang-switch me-3 d-flex align-items-center">
+
+                        <a class="lang-btn @(currentCulture == "tr" ? "active" : "")"
+                           asp-controller="@currentController"
+                           asp-action="@currentAction"
+                           asp-route-id="@currentId"
+                           asp-route-culture="tr">
+                            TR
+                        </a>
+
+                        <span class="divider mx-2">|</span>
+
+                        <a class="lang-btn @(currentCulture == "en" ? "active" : "")"
+                           asp-controller="@currentController"
+                           asp-action="@currentAction"
+                           asp-route-id="@currentId"
+                           asp-route-culture="en">
+                            EN
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,34 @@
+@using System.Globalization
+
+@{
+    // Basit Kontrol: Dil İngilizce mi?
+    var isEnglish = CultureInfo.CurrentUICulture.Name.StartsWith("en");
+
+    // Tek satırda çeviri: İngilizce ise "Corporate", değilse "Kurumsal"
+    ViewData["Title"] = isEnglish ? "Corporate" : "Kurumsal";
+}
+
+<!-- Partial View’ler -->
+@await Html.PartialAsync("_AboutWhoisGRIT")
+@await Html.PartialAsync("_AboutFounders")
+
+@await Html.PartialAsync("_AboutReference")
+@await Html.PartialAsync("_AboutStatistics")
+
+
+<!-- Styles -->
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/page/about/founders.css"/>
+    <link rel="stylesheet" href="~/css/page/about/references.css"/>
+    <link rel="stylesheet" href="~/css/page/about/statistics.css"/>
+    <link rel="stylesheet" href="~/css/page/about/who-is-grit.css"/>
+}
+
+<!-- Scripts -->
+@section Scripts
+{
+    <script src="~/js/page/about/reference.js"></script>
+    <script src="~/js/page/about/statistics.js"></script>
+    <script src="js/page/about/who-is-grit.js"></script>
+}

@@ -1,0 +1,181 @@
+/* ======= CONTACT PAGE STYLES ======= */
+
+/* 1. HERO SECTION */
+.contact-hero {
+    /* Hero arka planı her zaman koyu kalmalı ki üzerindeki beyaz yazı okunsun */
+    background: var(--gradient-dark);
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+.contact-hero::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image:
+            radial-gradient(circle at 10% 20%, rgba(26, 126, 99, 0.3) 0%, transparent 20%),
+            radial-gradient(circle at 90% 80%, rgba(233, 196, 106, 0.15) 0%, transparent 20%);
+    pointer-events: none;
+}
+
+/* Negatif margin ile kartları yukarı çek */
+.mt-n5 { margin-top: -60px !important; }
+
+/* 2. CONTACT CARDS */
+.contact-card {
+    background-color: var(--card-bg); /* Dark: Koyu Gri, Light: Beyaz */
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Hafif gölge */
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: var(--primary-main);
+}
+
+.icon-box {
+    width: 70px; height: 70px;
+    background: var(--bg-tertiary); /* İkon arka planı */
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; color: var(--primary-main);
+    margin: 0 auto 20px; transition: all 0.3s ease;
+}
+
+.contact-card:hover .icon-box {
+    background: var(--primary-main); color: var(--white); transform: scale(1.1);
+}
+
+.card-title { color: var(--text-primary); font-weight: 700; margin-bottom: 15px; }
+.card-text { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; }
+
+.link-custom {
+    color: var(--primary-main); text-decoration: none; font-weight: 600;
+    display: inline-flex; align-items: center; margin-top: 15px; transition: gap 0.3s;
+}
+.link-custom:hover { color: var(--accent-color); gap: 8px; }
+
+/* 3. FORM SECTION */
+.form-wrapper {
+    background-color: var(--card-bg);
+    padding: 40px; border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.section-heading { color: var(--text-primary); }
+.section-desc { color: var(--text-secondary); }
+
+/* Form Label */
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Input & Select */
+.form-control, .form-select {
+    background-color: var(--bg-primary); /* Input zemini */
+    border: 1px solid var(--border-color);
+    color: var(--text-primary); /* Yazı rengi */
+    padding: 12px 15px;
+    border-radius: 8px;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--primary-main);
+    box-shadow: 0 0 0 0.25rem rgba(26, 126, 99, 0.15);
+}
+
+/* Placeholder Rengi (Önemli: Dark modda silik kalmaması için) */
+.form-control::placeholder { color: var(--text-secondary); opacity: 0.6; }
+
+/* 4. MAP & SOCIAL */
+.map-wrapper { height: 100%; }
+
+#map {
+    width: 100%; border: 1px solid var(--border-color); z-index: 1;
+}
+
+/* Dark Modda Harita Filtresi */
+/* Eğer tema dark ise haritayı biraz koyultuyoruz */
+[data-theme="dark"] #map .leaflet-layer,
+[data-theme="dark"] #map .leaflet-control-zoom-in,
+[data-theme="dark"] #map .leaflet-control-zoom-out,
+[data-theme="dark"] #map .leaflet-control-attribution {
+    filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.social1-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.social1-btn {
+    width: 45px; height: 45px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-primary); text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social1-btn:hover {
+    background: var(--primary-main); color: var(--white);
+    transform: translateY(-3px); border-color: var(--primary-main);
+}
+
+/* 5. FAQ (ACCORDION) */
+.faq-section { background-color: var(--bg-secondary); }
+
+.custom-accordion .accordion-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px; margin-bottom: 15px; overflow: hidden;
+}
+
+.custom-accordion .accordion-button {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(26, 126, 99, 0.05); /* Açıkken hafif yeşil */
+    color: var(--primary-main);
+}
+
+/* Ok işareti rengi */
+.accordion-button::after {
+    filter: grayscale(100%); /* Default gri */
+}
+/* Dark modda okun görünmesi için invert et */
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1);
+}
+[data-theme="dark"] .accordion-button:not(.collapsed)::after {
+    filter: invert(1) sepia(1) hue-rotate(100deg); /* Aktifken yeşilimsi */
+}
+
+.accordion-body {
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .mt-n5 { margin-top: 0 !important; } /* Mobilde kartları yukarı çekme */
+    .contact-hero { padding: 120px 0 60px; }
+    .contact-card { margin-bottom: 20px; }
+}

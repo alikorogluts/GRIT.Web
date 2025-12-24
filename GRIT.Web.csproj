@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\js\page\sections\demo.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\page\sections\features.js" />
+      <_ContentIncludedByDefault Remove="Pages\News\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\About\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\About\_AbouthFounders.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\About\_AboutReference.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\About\_AboutSectorBenefits.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\About\_AboutStatistics.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\About\_AboutWhoisGRIT.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\image\halilhoca\arka1.jpeg" />
+      <_ContentIncludedByDefault Remove="wwwroot\image\halilhoca\arka2.jpeg" />
+      <_ContentIncludedByDefault Remove="wwwroot\image\halilhoca\arka3.jpeg" />
+      <_ContentIncludedByDefault Remove="wwwroot\image\halilhoca\arka4.jpeg" />
+      <_ContentIncludedByDefault Remove="Views\Areas\Admin\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Areas\Admin\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Areas\Admin\_NewsModal.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="MailKit" Version="4.14.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.11" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.11">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\js\page\about\reference.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Admin\Views\Admin\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Admin\Login.cshtml" />
+      <AdditionalFiles Include="Areas\Admin\Views\Admin\_NewsModal.cshtml" />
+    </ItemGroup>
+
+</Project>

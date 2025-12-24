@@ -1,0 +1,29 @@
+﻿@using System.Globalization
+
+@{
+    // Basit Kontrol: Dil İngilizce mi?
+    var isEnglish = CultureInfo.CurrentUICulture.Name.StartsWith("en");
+
+    // Tek satırda çeviri: İngilizce ise "Corporate", değilse "Kurumsal"
+    ViewData["Title"] = isEnglish ? "Home" : "Ana Sayfa";
+}
+
+
+@await Html.PartialAsync("_HomeHero")
+
+@await Html.PartialAsync("_HomeNews")
+
+@await Html.PartialAsync("_HomeSectorBenefits")
+
+@section Styles {
+<link rel="stylesheet" href="~/css/page/home/hero.css">
+<link rel="stylesheet" href="~/css/page/home/news.css">
+<link rel="stylesheet" href="~/css/page/home/sector-benefits.css"/>
+}
+
+@section Scripts
+{
+<script src="~/js/page/home/hero.js"></script>
+<script  src="~/js/page/animate.js"></script>
+
+}   
