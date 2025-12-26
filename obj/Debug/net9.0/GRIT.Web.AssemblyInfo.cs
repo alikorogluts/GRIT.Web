@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GRIT.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbffa8a04058c2bfc0c5e6682912f67ee8e09602")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66d36021c907c4ed94e8ead10e06c83c589207e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("GRIT.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GRIT.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

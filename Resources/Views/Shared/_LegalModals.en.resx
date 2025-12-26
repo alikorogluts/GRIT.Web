@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<data name="Kullanım Koşulları" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  
+  <data name="GRİT Coğrafi Risk &amp; Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti." xml:space="preserve">
+    <value>GRIT Geographic Risk &amp; Information Technology Services Ltd.</value>
+  </data>
+  <data name="Son Güncelleme: 2 Aralık 2025" xml:space="preserve">
+    <value>Last Updated: December 2, 2025</value>
+  </data>
+  <data name="GRIT web sitesini kullanmadan önce lütfen aşağıdaki şartları dikkatlice okuyunuz. Bu sayfa KVKK &amp; Gizlilik Politikası içermemektedir." xml:space="preserve">
+    <value>Please read the following terms carefully before using the GRIT website. This page does not contain the Privacy Policy &amp; GDPR.</value>
+  </data>
+
+  <data name="1. Tanımlar" xml:space="preserve">
+    <value>1. Definitions</value>
+  </data>
+  <data name="Kullanıcı / Ziyaretçi:" xml:space="preserve">
+    <value>User / Visitor:</value>
+  </data>
+  <data name="Siteye erişen gerçek veya tüzel kişiler." xml:space="preserve">
+    <value>Real or legal persons accessing the Site.</value>
+  </data>
+  <data name="Hizmetler:" xml:space="preserve">
+    <value>Services:</value>
+  </data>
+  <data name="GRİT tarafından tanıtılan yazılım, harita, analiz, rapor, API ve benzeri ürün ve hizmetler." xml:space="preserve">
+    <value>Software, maps, analysis, reports, APIs, and similar products promoted by GRIT.</value>
+  </data>
+  <data name="2. İçerik ve Telif Hakları" xml:space="preserve">
+    <value>2. Content and Copyrights</value>
+  </data>
+  <data name="Site üzerinde yer alan tüm içerikler (metin, görüntü, logo, grafik, harita katmanları, kod, raporlar vb.) GRİT'in mülkiyetindedir ve telif haklarıyla korunmaktadır. GRİT’in yazılı izni olmadan bu içeriklerin kopyalanması, dağıtılması, çoğaltılması veya ticari amaçla kullanılması yasaktır." xml:space="preserve">
+    <value>All content on the Site (text, images, logos, graphics, map layers, code, reports, etc.) is the property of GRIT and is protected by copyright. Copying, distributing, reproducing, or using these contents for commercial purposes without GRIT's written permission is prohibited.</value>
+  </data>
+  <data name="3. Bilgilendirici Niteliği ve Sorumluluk Reddi" xml:space="preserve">
+    <value>3. Disclaimer</value>
+  </data>
+  <data name="Site üzerindeki bilgiler tanıtım amaçlıdır ve tek başına bir risk değerlendirmesi, aktüeryal hesaplama veya poliçe kararı için yeterli değildir. GRİT, Site içeriğinin güncelliği ve doğruluğu için azami özeni gösterir; ancak içeriklerdeki eksiklik, güncelliğini yitirme veya hata durumlarından sorumlu tutulamaz." xml:space="preserve">
+    <value>The information on the Site is for promotional purposes and is not sufficient for a risk assessment, actuarial calculation, or policy decision on its own. GRIT takes utmost care for the accuracy of the Site content but cannot be held responsible for errors or outdated information.</value>
+  </data>
+  <data name="4. Hizmetlerin Kullanımı ve Lisans" xml:space="preserve">
+    <value>4. Use of Services and License</value>
+  </data>
+  <data name="GRİT’in sunduğu yazılımlar, veri setleri, API’ler ve raporlar yalnızca ilgili sözleşme ve lisans koşulları çerçevesinde kullanılabilir. İlgili lisans ve sözleşme hükümleri haricinde erişim, kopyalama, tersine mühendislik veya çoğaltma yasaktır." xml:space="preserve">
+    <value>The software, datasets, APIs, and reports offered by GRIT can only be used within the framework of the relevant contract and license conditions. Access, copying, reverse engineering, or reproduction outside the relevant license and contract provisions is prohibited.</value>
+  </data>
+  <data name="5. Kullanıcı Yükümlülükleri" xml:space="preserve">
+    <value>5. User Obligations</value>
+  </data>
+  <data name="Kullanıcılar Site’yi yalnızca yasalara uygun şekilde ve bu koşullara riayet ederek kullanmayı kabul eder." xml:space="preserve">
+    <value>Users agree to use the Site only in accordance with the laws and by complying with these conditions.</value>
+  </data>
+  <data name="Siteye zarar verebilecek, yetkisiz veri çekmeye (scraping), sistemleri bozabilecek veya güvenliği ihlal edebilecek eylemler yapmak kesinlikle yasaktır." xml:space="preserve">
+    <value>Actions that may damage the Site, unauthorized data scraping, or security breaches are strictly prohibited.</value>
+  </data>
+  <data name="Yanlış, yanıltıcı veya hukuka aykırı bilgi sağlanması durumunda GRİT gerekli yasal işlemleri başlatma hakkına sahiptir." xml:space="preserve">
+    <value>In case of providing false, misleading, or unlawful information, GRIT has the right to initiate necessary legal proceedings.</value>
+  </data>
+  <data name="6. Üçüncü Taraf İçerikleri" xml:space="preserve">
+    <value>6. Third Party Content</value>
+  </data>
+  <data name="Site, üçüncü taraf bağlantıları (ör. Google Maps, YouTube) içerebilir. Bu bağlantıların içerikleri ve uygulamaları GRİT’in kontrolünde değildir. GRİT, bu dış sitelerden kaynaklanan herhangi bir zarardan sorumlu tutulamaz." xml:space="preserve">
+    <value>The Site may contain third-party links (e.g., Google Maps, YouTube). GRIT is not responsible for the content and practices of these links. GRİT cannot be held responsible for any damage caused by these external sites.</value>
+  </data>
+  <data name="7. Sorumluluğun Sınırlandırılması" xml:space="preserve">
+    <value>7. Limitation of Liability</value>
+  </data>
+  <data name="GRİT, Site kullanımı veya Site vasıtasıyla erişilen içeriklerden doğabilecek doğrudan, dolaylı veya veri kayıplarından sorumlu tutulamaz. Site üzerindeki haritalar ve analizler örnek ve bilgilendirme amaçlıdır; kesin sonuç ve garanti teşkil etmez." xml:space="preserve">
+    <value>GRIT cannot be held responsible for any direct, indirect, incidental, or consequential damages, data losses, business interruptions, or loss of profit arising from the use of the Site. Maps and analyses on the Site are for example and information purposes; they do not constitute a definitive result or guarantee.</value>
+  </data>
+  <data name="8. Değişiklik Hakkı" xml:space="preserve">
+    <value>8. Right to Modify</value>
+  </data>
+  <data name="GRİT, bu Kullanım Koşulları’nı her zaman değiştirme hakkını saklı tutar. Değişiklikler Site üzerinde yayınlandığı anda yürürlüğe girer." xml:space="preserve">
+    <value>GRIT reserves the right to change these Terms of Use at any time. Changes become effective as soon as they are published on the Site.</value>
+  </data>
+  <data name="9. Fikri Mülkiyet İhlalleri" xml:space="preserve">
+    <value>9. Intellectual Property Violations</value>
+  </data>
+  <data name="Bu sayfada veya Site üzerinde yer alan içeriklerin fikri mülkiyet haklarının ihlali iddiası ile ilgili olarak bizimle iletişime geçebilirsiniz." xml:space="preserve">
+    <value>You can contact us regarding the claim of violation of intellectual property rights of the content on this page or on the Site.</value>
+  </data>
+  <data name="10. Uygulanacak Hukuk ve Yetki" xml:space="preserve">
+    <value>10. Applicable Law and Jurisdiction</value>
+  </data>
+  <data name="Bu Kullanım Koşulları Türkiye Cumhuriyeti mevzuatına tabidir. Bu koşullardan doğabilecek ihtilaflarda Samsun mahkemeleri ve icra daireleri yetkilidir." xml:space="preserve">
+    <value>These Terms of Use are subject to the legislation of the Republic of Turkey. Samsun courts and enforcement offices are authorized for disputes arising from these conditions.</value>
+  </data>
+  <data name="11. İletişim" xml:space="preserve">
+    <value>11. Contact</value>
+  </data>
+  <data name="Adres:" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="Samsun Teknopark" xml:space="preserve">
+    <value>Samsun Technopark</value>
+  </data>
+  <data name="E-posta:" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+
+  <data name="KVKK &amp; Gizlilik Politikası" xml:space="preserve">
+    <value>Privacy Policy &amp; GDPR</value>
+  </data>
+  <data name="Yürürlük Tarihi: 2 Aralık 2025" xml:space="preserve">
+    <value>Effective Date: December 2, 2025</value>
+  </data>
+  <data name="GRİT olarak kişisel verilerin korunması bizim için önemlidir. Bu politika, hangi kişisel verileri işlediğimizi, amaçlarımızı, hukuki sebepleri ve veri sahiplerinin haklarını açıklar." xml:space="preserve">
+    <value>Protecting personal data is important to us as GRIT. This policy explains what personal data we process, our purposes, legal grounds, and the rights of data subjects.</value>
+  </data>
+  <data name="1. Veri Sorumlusu" xml:space="preserve">
+    <value>1. Data Controller</value>
+  </data>
+  <data name="GRİT Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti. (Bundan sonra “GRİT”) KVKK kapsamında veri sorumlusu sıfatıyla kişisel verilerinizin işlenmesinden sorumludur." xml:space="preserve">
+    <value>GRIT Geographic Risk &amp; Information Technology Services Ltd. (Hereinafter “GRIT”) acts as the data controller responsible for processing your personal data within the scope of Personal Data Protection Law.</value>
+  </data>
+  <data name="2. İrtibat Bilgileri" xml:space="preserve">
+    <value>2. Contact Information</value>
+  </data>
+  <data name="Samsun Teknopark, Samsun, Türkiye" xml:space="preserve">
+    <value>Samsun Technopark, Samsun, Turkey</value>
+  </data>
+  <data name="Telefon:" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="3. Hangi Kişisel Veriler İşleniyor?" xml:space="preserve">
+    <value>3. Which Personal Data is Processed?</value>
+  </data>
+  <data name="Kimlik bilgileri:" xml:space="preserve">
+    <value>Identity info:</value>
+  </data>
+  <data name="Ad, soyad" xml:space="preserve">
+    <value>Name, surname</value>
+  </data>
+  <data name="İletişim bilgileri:" xml:space="preserve">
+    <value>Contact info:</value>
+  </data>
+  <data name="E-posta adresi, telefon numarası, adres" xml:space="preserve">
+    <value>Email address, phone number, address info</value>
+  </data>
+  <data name="Kurumsal bilgiler:" xml:space="preserve">
+    <value>Corporate info:</value>
+  </data>
+  <data name="Kurum adı, pozisyon" xml:space="preserve">
+    <value>Company name, position</value>
+  </data>
+  <data name="Teknik veriler:" xml:space="preserve">
+    <value>Technical data:</value>
+  </data>
+  <data name="IP adresi, tarayıcı bilgileri, çerezler" xml:space="preserve">
+    <value>IP address, browser info, cookies</value>
+  </data>
+  <data name="4. Kişisel Verilerin İşlenme Amaçları" xml:space="preserve">
+    <value>4. Purposes of Processing</value>
+  </data>
+  <data name="İletişim taleplerine cevap verme, demo sağlama, sözleşme süreçleri, yasal yükümlülükler ve (açık rıza varsa) pazarlama faaliyetleri." xml:space="preserve">
+    <value>Responding to contact requests, providing demos/offers, executing contract processes, legal obligations, and marketing activities (with explicit consent).</value>
+  </data>
+  <data name="5. Kişisel Verilerin İşlenme Şartları" xml:space="preserve">
+    <value>5. Conditions for Processing Personal Data</value>
+  </data>
+  <data name="Açık rıza, sözleşmenin ifası, kanunlarda öngörülmesi, hukuki yükümlülük ve meşru menfaat." xml:space="preserve">
+    <value>Explicit consent, establishment or performance of a contract, expressly provided for in laws, legal obligation, and legitimate interest.</value>
+  </data>
+  <data name="6. Kişisel Verilerin Aktarılması" xml:space="preserve">
+    <value>6. Transfer of Personal Data</value>
+  </data>
+  <data name="Hizmet tedarikçileri (hosting vb.), iş ortakları (projeye özel) ve resmi makamlar." xml:space="preserve">
+    <value>Service providers (hosting, etc.), business partners (project-specific), and official authorities.</value>
+  </data>
+  <data name="7. Veri Saklama Süreleri" xml:space="preserve">
+    <value>7. Data Retention Periods</value>
+  </data>
+  <data name="İletişim kayıtları 2 yıl, sözleşme verileri sözleşme süresi + yasal süre boyunca saklanır." xml:space="preserve">
+    <value>Contact records for 2 years, contract data for the contract period + legal retention periods.</value>
+  </data>
+  <data name="8. Çerezler (Cookies)" xml:space="preserve">
+    <value>8. Cookies</value>
+  </data>
+  <data name="Site, kullanıcı deneyimini geliştirmek için çerezler kullanır. Tarayıcı ayarlarınızdan yönetebilirsiniz." xml:space="preserve">
+    <value>The Site uses cookies to improve user experience. You can manage or disable cookies via your browser settings.</value>
+  </data>
+  <data name="9. Veri Güvenliği" xml:space="preserve">
+    <value>9. Data Security</value>
+  </data>
+  <data name="HTTPS şifreleme, erişim kontrolleri, güvenlik duvarları ve yedekleme sistemleri kullanılmaktadır." xml:space="preserve">
+    <value>We use HTTPS encryption, access controls, firewalls, and backup systems to protect data.</value>
+  </data>
+  <data name="10. Veri Sahibinin Hakları" xml:space="preserve">
+    <value>10. Rights of the Data Subject</value>
+  </data>
+  <data name="KVKK uyarınca kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltme isteme, silinmesini isteme ve şikayet etme hakkına sahipsiniz." xml:space="preserve">
+    <value>In accordance with data protection laws, you have the right to learn whether your personal data is processed, request information, request correction or deletion, and lodge a complaint.</value>
+  </data>
+  <data name="11. İletişim ve Başvuru" xml:space="preserve">
+    <value>11. Contact and Application</value>
+  </data>
+  <data name="Taleplerinizi yazılı olarak Samsun Teknopark adresine veya info@grit.com.tr adresine iletebilirsiniz." xml:space="preserve">
+    <value>You can submit your requests in writing to the Samsun Technopark address or to info@grit.com.tr.</value>
+  </data>
+  
+  </root>

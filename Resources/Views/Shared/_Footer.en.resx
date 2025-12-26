@@ -39,4 +39,10 @@
     <data name="GRİT Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti. Tüm hakları saklıdır." xml:space="preserve">
     <value>GRIT Geographic Risk and Information Technology Services Ltd. All rights reserved.</value>
   </data>
+  <data name="Kullanım Koşulları" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="KVKK &amp; Gizlilik" xml:space="preserve">
+    <value>Privacy Policy &amp; GDPR</value>
+  </data>
 </root>

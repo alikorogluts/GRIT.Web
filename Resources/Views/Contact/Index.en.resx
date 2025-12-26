@@ -61,7 +61,7 @@
     <value>Full Name</value>
   </data>
   <data name="Örn: Ali KÖROĞLU" xml:space="preserve">
-    <value>Ex: Cihan OREN</value>
+    <value>Ex: Joe BELL</value>
   </data>
 
   <data name="E-posta Adresiniz" xml:space="preserve">
@@ -150,5 +150,16 @@
   <data name="Hata!" xml:space="preserve">
     <value>Error!</value>
   </data>
-
+  <data name="Lütfen KVKK metnini onaylayınız." xml:space="preserve">
+    <value>Please approve the Privacy Policy text.</value>
+  </data>
+  <data name="Kişisel verilerimin" xml:space="preserve">
+    <value>I have read and approve the processing of my personal data within the scope of the</value>
+  </data>
+  <data name="KVKK Aydınlatma Metni" xml:space="preserve">
+    <value>Privacy Policy &amp; GDPR</value>
+  </data>
+  <data name="kapsamında işlenmesini okudum ve onaylıyorum." xml:space="preserve">
+    <value>.</value>
+  </data>
 </root>

@@ -23,10 +23,7 @@ public class ContactController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+    
 
     [HttpPost]
     [ValidateAntiForgeryToken]

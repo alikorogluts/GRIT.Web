@@ -1,0 +1,125 @@
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">@Localizer["Kullanım Koşulları"]</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="@Localizer["Kapat"]"></button>
+            </div>
+            <div class="modal-body text-start">
+                <h6>@Localizer["GRİT Coğrafi Risk & Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti."]</h6>
+                <p class="small text-muted">@Localizer["Son Güncelleme: 2 Aralık 2025"]</p>
+                <p>@Localizer["GRİT web sitesini kullanmadan önce lütfen aşağıdaki şartları dikkatlice okuyunuz. Bu sayfa KVKK & Gizlilik Politikası içermemektedir."]</p>
+                
+                <hr>
+
+                <h6>@Localizer["1. Tanımlar"]</h6>
+                <p>
+                    <strong>@Localizer["Kullanıcı / Ziyaretçi:"]</strong> @Localizer["Siteye erişen gerçek veya tüzel kişiler."]<br>
+                    <strong>@Localizer["Hizmetler:"]</strong> @Localizer["GRİT tarafından tanıtılan yazılım, harita, analiz, rapor, API ve benzeri ürün ve hizmetler."]
+                </p>
+
+                <h6>@Localizer["2. İçerik ve Telif Hakları"]</h6>
+                <p>@Localizer["Site üzerinde yer alan tüm içerikler (metin, görüntü, logo, grafik, harita katmanları, kod, raporlar vb.) GRİT'in mülkiyetindedir ve telif haklarıyla korunmaktadır. GRİT’in yazılı izni olmadan bu içeriklerin kopyalanması, dağıtılması, çoğaltılması veya ticari amaçla kullanılması yasaktır."]</p>
+
+                <h6>@Localizer["3. Bilgilendirici Niteliği ve Sorumluluk Reddi"]</h6>
+                <p>@Localizer["Site üzerindeki bilgiler tanıtım amaçlıdır ve tek başına bir risk değerlendirmesi, aktüeryal hesaplama veya poliçe kararı için yeterli değildir. GRİT, Site içeriğinin güncelliği ve doğruluğu için azami özeni gösterir; ancak içeriklerdeki eksiklik, güncelliğini yitirme veya hata durumlarından sorumlu tutulamaz."]</p>
+
+                <h6>@Localizer["4. Hizmetlerin Kullanımı ve Lisans"]</h6>
+                <p>@Localizer["GRİT’in sunduğu yazılımlar, veri setleri, API’ler ve raporlar yalnızca ilgili sözleşme ve lisans koşulları çerçevesinde kullanılabilir. İlgili lisans ve sözleşme hükümleri haricinde erişim, kopyalama, tersine mühendislik veya çoğaltma yasaktır."]</p>
+
+                <h6>@Localizer["5. Kullanıcı Yükümlülükleri"]</h6>
+                <ul>
+                    <li>@Localizer["Kullanıcılar Site’yi yalnızca yasalara uygun şekilde ve bu koşullara riayet ederek kullanmayı kabul eder."]</li>
+                    <li>@Localizer["Siteye zarar verebilecek, yetkisiz veri çekmeye (scraping), sistemleri bozabilecek veya güvenliği ihlal edebilecek eylemler yapmak kesinlikle yasaktır."]</li>
+                    <li>@Localizer["Yanlış, yanıltıcı veya hukuka aykırı bilgi sağlanması durumunda GRİT gerekli yasal işlemleri başlatma hakkına sahiptir."]</li>
+                </ul>
+
+                <h6>@Localizer["6. Üçüncü Taraf İçerikleri"]</h6>
+                <p>@Localizer["Site, üçüncü taraf bağlantıları (ör. Google Maps, YouTube) içerebilir. Bu bağlantıların içerikleri ve uygulamaları GRİT’in kontrolünde değildir. GRİT, bu dış sitelerden kaynaklanan herhangi bir zarardan sorumlu tutulamaz."]</p>
+
+                <h6>@Localizer["7. Sorumluluğun Sınırlandırılması"]</h6>
+                <p>@Localizer["GRİT, Site kullanımı veya Site vasıtasıyla erişilen içeriklerden doğabilecek doğrudan, dolaylı veya veri kayıplarından sorumlu tutulamaz. Site üzerindeki haritalar ve analizler örnek ve bilgilendirme amaçlıdır; kesin sonuç ve garanti teşkil etmez."]</p>
+
+                <h6>@Localizer["8. Değişiklik Hakkı"]</h6>
+                <p>@Localizer["GRİT, bu Kullanım Koşulları’nı her zaman değiştirme hakkını saklı tutar. Değişiklikler Site üzerinde yayınlandığı anda yürürlüğe girer."]</p>
+
+                <h6>@Localizer["9. Fikri Mülkiyet İhlalleri"]</h6>
+                <p>@Localizer["Bu sayfada veya Site üzerinde yer alan içeriklerin fikri mülkiyet haklarının ihlali iddiası ile ilgili olarak bizimle iletişime geçebilirsiniz."]</p>
+
+                <h6>@Localizer["10. Uygulanacak Hukuk ve Yetki"]</h6>
+                <p>@Localizer["Bu Kullanım Koşulları Türkiye Cumhuriyeti mevzuatına tabidir. Bu koşullardan doğabilecek ihtilaflarda Samsun mahkemeleri ve icra daireleri yetkilidir."]</p>
+
+                <h6>@Localizer["11. İletişim"]</h6>
+                <p>
+                    <strong>@Localizer["Adres:"]</strong> @Localizer["Samsun Teknopark"]<br>
+                    <strong>@Localizer["E-posta:"]</strong> info@grit.com.tr
+                </p>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="kvkkModal" tabindex="-1" aria-labelledby="kvkkModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="kvkkModalLabel">@Localizer["KVKK & Gizlilik Politikası"]</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="@Localizer["Kapat"]"></button>
+            </div>
+            <div class="modal-body text-start">
+                <h6>@Localizer["GRİT Coğrafi Risk & Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti."]</h6>
+                <p class="small text-muted">@Localizer["Yürürlük Tarihi: 2 Aralık 2025"]</p>
+                <p>@Localizer["GRİT olarak kişisel verilerin korunması bizim için önemlidir. Bu politika, hangi kişisel verileri işlediğimizi, amaçlarımızı, hukuki sebepleri ve veri sahiplerinin haklarını açıklar."]</p>
+                
+                <hr>
+
+                <h6>@Localizer["1. Veri Sorumlusu"]</h6>
+                <p>@Localizer["GRİT Coğrafi Risk ve Bilgi Teknoloji Hizmetleri San. ve Tic. Ltd. Şti. (Bundan sonra “GRİT”) KVKK kapsamında veri sorumlusu sıfatıyla kişisel verilerinizin işlenmesinden sorumludur."]</p>
+
+                <h6>@Localizer["2. İrtibat Bilgileri"]</h6>
+                <p>
+                    <strong>@Localizer["Adres:"]</strong> @Localizer["Samsun Teknopark, Samsun, Türkiye"]<br>
+                    <strong>@Localizer["E-posta:"]</strong> info@grit.com.tr<br>
+                    <strong>@Localizer["Telefon:"]</strong> +90 (362) 502 00 61
+                </p>
+
+                <h6>@Localizer["3. Hangi Kişisel Veriler İşleniyor?"]</h6>
+                <ul>
+                    <li><strong>@Localizer["Kimlik bilgileri:"]</strong> @Localizer["Ad, soyad"]</li>
+                    <li><strong>@Localizer["İletişim bilgileri:"]</strong> @Localizer["E-posta adresi, telefon numarası, adres"]</li>
+                    <li><strong>@Localizer["Kurumsal bilgiler:"]</strong> @Localizer["Kurum adı, pozisyon"]</li>
+                    <li><strong>@Localizer["Teknik veriler:"]</strong> @Localizer["IP adresi, tarayıcı bilgileri, çerezler"]</li>
+                </ul>
+
+                <h6>@Localizer["4. Kişisel Verilerin İşlenme Amaçları"]</h6>
+                <p>@Localizer["İletişim taleplerine cevap verme, demo sağlama, sözleşme süreçleri, yasal yükümlülükler ve (açık rıza varsa) pazarlama faaliyetleri."]</p>
+
+                <h6>@Localizer["5. Kişisel Verilerin İşlenme Şartları"]</h6>
+                <p>@Localizer["Açık rıza, sözleşmenin ifası, kanunlarda öngörülmesi, hukuki yükümlülük ve meşru menfaat."]</p>
+
+                <h6>@Localizer["6. Kişisel Verilerin Aktarılması"]</h6>
+                <p>@Localizer["Hizmet tedarikçileri (hosting vb.), iş ortakları (projeye özel) ve resmi makamlar."]</p>
+
+                <h6>@Localizer["7. Veri Saklama Süreleri"]</h6>
+                <p>@Localizer["İletişim kayıtları 2 yıl, sözleşme verileri sözleşme süresi + yasal süre boyunca saklanır."]</p>
+
+                <h6>@Localizer["8. Çerezler (Cookies)"]</h6>
+                <p>@Localizer["Site, kullanıcı deneyimini geliştirmek için çerezler kullanır. Tarayıcı ayarlarınızdan yönetebilirsiniz."]</p>
+
+                <h6>@Localizer["9. Veri Güvenliği"]</h6>
+                <p>@Localizer["HTTPS şifreleme, erişim kontrolleri, güvenlik duvarları ve yedekleme sistemleri kullanılmaktadır."]</p>
+
+                <h6>@Localizer["10. Veri Sahibinin Hakları"]</h6>
+                <p>@Localizer["KVKK uyarınca kişisel verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltme isteme, silinmesini isteme ve şikayet etme hakkına sahipsiniz."]</p>
+
+                <h6>@Localizer["11. İletişim ve Başvuru"]</h6>
+                <p>@Localizer["Taleplerinizi yazılı olarak Samsun Teknopark adresine veya info@grit.com.tr adresine iletebilirsiniz."]</p>
+            </div>
+            
+        </div>
+    </div>
+</div>

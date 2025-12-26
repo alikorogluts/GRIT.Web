@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('map')) {
         initMap();
     }
+    document.getElementById('kvkkConsent').addEventListener('change',function () {
+        if(this.checked) {
+            const kvkkModal = new bootstrap.Modal(document.getElementById('kvkkModal'));
+            kvkkModal.show();
+        }
+    });
 
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -135,4 +141,6 @@ async function handleFormSubmit(e) {
         btn.disabled = false;
         btn.innerHTML = originalContent;
     }
+    
+    
 }

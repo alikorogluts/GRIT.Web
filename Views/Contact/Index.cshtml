@@ -143,6 +143,21 @@
                                               maxlength="500" required></textarea>
                                 </div>
                             </div>
+                            <div class="col-12 mt-3">
+                                <div class="form-check">
+                                    <input href="" class="form-check-input" type="checkbox" name="KvkkConsent" value="true" id="kvkkConsent" required
+                                           oninvalid="this.setCustomValidity('@Localizer["Lütfen KVKK metnini onaylayınız."]');"
+                                           oninput="this.setCustomValidity('');" >
+                
+                                    <label class="form-check-label small text-muted user-select-none" for="kvkkConsent" style="cursor: pointer;">
+                                        @Localizer["Kişisel verilerimin"] 
+                                        <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#kvkkModal" class="text-warning fw-bold text-decoration-underline position-relative z-2">
+                                            @Localizer["KVKK Aydınlatma Metni"]
+                                        </a>
+                                        @Localizer["kapsamında işlenmesini okudum ve onaylıyorum."]
+                                    </label>
+                                </div>
+                            </div>
 
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary w-100 py-3">
