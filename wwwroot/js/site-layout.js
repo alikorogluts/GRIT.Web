@@ -15,21 +15,46 @@ if (typeof AOS !== 'undefined') {
 function initHeader() {
     const header = document.getElementById('header');
     const navbarCollapse = document.getElementById('navbarNav');
-    const navbarToggler = document.querySelector('.navbar-toggler'); // Menü butonunu seçtik
+    const navbarToggler = document.querySelector('.navbar-toggler');
     const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
 
-    // 1. Scroll Efekti (Glassmorphism)
-    function handleScroll() {
-        if (window.scrollY > 50) {
+    // --- YENİ EKLENEN KISIM BAŞLANGIÇ (AKILLI HEADER) ---
+    let lastScrollTop = 0; // Son konumu hafızada tutmak için
+
+    window.addEventListener('scroll', function() {
+        let currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+        // 1. Şeffaflık Ayarı (Glassmorphism)
+        // Sayfa en tepede değilse (.scrolled ekle)
+        if (currentScroll > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
+            // En tepedeysek header KESİNLİKLE görünür olmalı (gizlemeyi iptal et)
+            header.classList.remove('header-hidden');
         }
-    }
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
 
-    // 2. Akıllı Link Yönetimi (Sayfa içi kaydırma)
+        // 2. Gizle / Göster Mantığı (Smart Sticky)
+        // Mobil menü açıksa bu özelliği devre dışı bırak
+        if (!navbarCollapse.classList.contains('show')) {
+
+            // Eğer aşağı kaydırıyorsak VE belli bir miktar indiysek (>100px)
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                // AŞAĞI İNİYOR: Gizle
+                header.classList.add('header-hidden');
+            } else {
+                // YUKARI ÇIKIYOR: Göster
+                header.classList.remove('header-hidden');
+            }
+        }
+
+        // iOS'te sayfa en tepedeyken yukarı çekince oluşan negatif değeri engelle
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+    // --- YENİ EKLENEN KISIM BİTİŞ ---
+
+
+    // 3. Akıllı Link Yönetimi (Sayfa içi kaydırma - BURASI ESKİSİYLE AYNI)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -42,7 +67,6 @@ function initHeader() {
                     if (targetElement) {
                         e.preventDefault();
 
-                        // Menüyü kapat
                         if (navbarCollapse.classList.contains('show')) {
                             if (typeof bootstrap !== 'undefined') {
                                 const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
@@ -50,7 +74,6 @@ function initHeader() {
                             }
                         }
 
-                        // Scroll işlemi
                         if (typeof gsap !== 'undefined') {
                             gsap.to(window, {
                                 duration: 1.2,
@@ -70,17 +93,10 @@ function initHeader() {
         });
     });
 
-    // ============================================================
-    // 3. EKRANIN BOŞ YERİNE TIKLAYINCA MENÜYÜ KAPATMA (YENİ EKLENDİ)
-    // ============================================================
+    // 4. Ekranın boş yerine tıklayınca menüyü kapatma (BURASI ESKİSİYLE AYNI)
     document.addEventListener('click', function(event) {
-        // Eğer menü açıksa (.show sınıfı varsa)
         if (navbarCollapse.classList.contains('show')) {
-
-            // Tıklanan yer Menü Kutusunun içi DEĞİLSE  VE  Tıklanan yer Menü Butonu (Hamburger) DEĞİLSE
             if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
-
-                // Bootstrap ile menüyü kapat
                 if (typeof bootstrap !== 'undefined') {
                     const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
                     if (bsCollapse) {

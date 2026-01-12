@@ -1,9 +1,0 @@
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/GRIT.Web
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/appsettings.Development.json
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/appsettings.json
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/GRIT.Web.dll
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/GRIT.Web.deps.json
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/GRIT.Web.runtimeconfig.json
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/GRIT.Web.pdb
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/en/GRIT.Web.resources.dll
-/var/folders/z8/fxq6y0tx3m56l091nzhtkcwr0000gn/T/rider-publish5744932321186508548/tr/GRIT.Web.resources.dll

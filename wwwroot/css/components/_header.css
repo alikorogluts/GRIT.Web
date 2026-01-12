@@ -1,26 +1,27 @@
 /* ======= HEADER STYLES ======= */
-
-/* 1. Header Konteyner (GENEL / MASAÜSTÜ AYARI) */
+/* 1. Header Konteyner (GÜNCELLENDİ) */
 .header {
-    /* MASAÜSTÜ BAŞLANGIÇ: Sayfa en tepedeyken yerinde dursun */
-    position: absolute;
+    position: fixed; /* ARTIK HEP SABİT */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1030;
 
-    /* Görünüm */
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Geçiş efektleri: Yukarı/Aşağı kayma ve renk değişimi için */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, padding 0.3s ease;
     background: transparent;
     padding: 20px 0;
 }
 
-/* MASAÜSTÜ: JS ile eklenen .scrolled sınıfı (Aşağı kaydırınca SABİTLENSİN) */
+/* YENİ: Header Gizleme Sınıfı (JS ekleyecek) */
+.header.header-hidden {
+    transform: translateY(-100%); /* Header'ı ekranın dışına, yukarı iter */
+}
+
+/* 2. Scrolled Sınıfı (GÜNCELLENDİ) */
 .header.scrolled {
-    position: fixed; /* BURASI EKLENDİ: Masaüstünde aşağı kayınca yapışsın */
-    top: 0;
-    left: 0;
-    width: 100%;
+    /* position: fixed; <- BURAYI SİLDİK, zaten yukarıda fixed */
+    /* animation: slideDown... <- BURAYI SİLDİK, animasyonu JS yönetecek */
 
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(15px);
@@ -28,15 +29,6 @@
     padding: 10px 0;
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-
-    /* Ufak bir animasyonla yukarıdan gelsin */
-    animation: slideDown 0.35s ease-out forwards;
-}
-
-/* Masaüstü header gelme animasyonu */
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
 }
 
 /* Light Mod için Header Arka Planı */

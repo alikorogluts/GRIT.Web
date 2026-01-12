@@ -29,11 +29,11 @@
       <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
       <PackageReference Include="MailKit" Version="4.14.1" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.11" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.11">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -44,10 +44,6 @@
       <AdditionalFiles Include="Areas\Admin\Views\Admin\Index.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Admin\Login.cshtml" />
       <AdditionalFiles Include="Areas\Admin\Views\Admin\_NewsModal.cshtml" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Migrations\" />
     </ItemGroup>
 
 </Project>

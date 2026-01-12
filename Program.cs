@@ -19,9 +19,9 @@ builder.Services.AddControllersWithViews()
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 // Veritabanı
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 // Kendi Servislerin
 builder.Services.AddScoped<INewsRepository, NewsRepository>();
 builder.Services.AddScoped<IHomeService, HomeService>();

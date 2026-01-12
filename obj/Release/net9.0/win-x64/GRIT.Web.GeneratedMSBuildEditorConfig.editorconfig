@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GRIT.Web
+build_property.RootNamespace = GRIT.Web
+build_property.ProjectDir = /Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Areas/Admin/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWRtaW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Areas/Admin/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWRtaW4vTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Areas/Admin/Views/Admin/_NewsModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQWRtaW4vX05ld3NNb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29udGFjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Corporate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29ycG9yYXRlL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Corporate/_AboutFounders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29ycG9yYXRlL19BYm91dEZvdW5kZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Corporate/_AboutReference.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29ycG9yYXRlL19BYm91dFJlZmVyZW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Corporate/_AboutStatistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29ycG9yYXRlL19BYm91dFN0YXRpc3RpY3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Corporate/_AboutWhoisGRIT.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29ycG9yYXRlL19BYm91dFdob2lzR1JJVC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Error/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IvTm90Rm91bmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Home/_HomeHero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9fSG9tZUhlcm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Home/_HomeNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9fSG9tZU5ld3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Home/_HomeSectorBenefits.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9fSG9tZVNlY3RvckJlbmVmaXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Products/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/Shared/_LegalModals.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MZWdhbE1vZGFscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/alikoroglu/Desktop/GritWeb/GRIT/GRIT.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

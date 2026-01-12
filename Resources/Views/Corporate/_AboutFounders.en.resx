@@ -12,6 +12,10 @@
     <data name="Kurucu Ortak" xml:space="preserve">
     <value>Co-Founder</value>
   </data>
+  
+    <data name="Doç. Dr. Cem KILIÇOĞLU" xml:space="preserve">
+  <value>Assoc. Prof. Dr. Cem KILIÇOĞLU</value>
+  </data>
 
     <data name="Coğrafi Bilgi Sistemleri, WebCBS, Makine Öğrenmesi, Heyelan, Taşkın ve Yangın Modelleme" xml:space="preserve">
     <value>Geographic Information Systems (GIS), WebGIS, Machine Learning, Landslide, Flood and Wildfire Modeling</value>

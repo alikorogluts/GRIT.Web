@@ -4,9 +4,8 @@ using Microsoft.Extensions.Configuration;
 using System.IO;
 using GRIT.Web.Data;
 
-namespace GRIT.Web.Data // ⚠️ AppDbContext ile aynı namespace olduğundan emin ol
+namespace GRIT.Web.Data 
 {
-    // Bu sınıf SADECE "dotnet ef" komutları çalışırken devreye girer.
     public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
         public AppDbContext CreateDbContext(string[] args)
@@ -21,9 +20,12 @@ namespace GRIT.Web.Data // ⚠️ AppDbContext ile aynı namespace olduğundan e
             var builder = new DbContextOptionsBuilder<AppDbContext>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            builder.UseSqlServer(connectionString);
+            // --- DÜZELTİLEN KISIM BAŞLANGIÇ ---
+            // Pomelo kütüphanesinin yeni sürümlerinde ServerVersion belirtmek zorunludur.
+            builder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+            // --- DÜZELTİLEN KISIM BİTİŞ ---
 
-            // 3. AppDbContext'i, IConfiguration parametresiyle beraber manuel oluştur
+            // 3. AppDbContext'i oluştur
             return new AppDbContext(builder.Options, configuration);
         }
     }
